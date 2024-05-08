@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naomi's Portfolio | {{ title }}</title>
-</head>
-<body>
-    <header>
-        <h1>{{ title }}</h1>
-    </header>
-    
+{% extends "base.njk" %}
+
+{% block template %}
+    {% if title %}<h2>{{ title }}</h2>{% endif %}
+
     <main>
         {{ content | safe }}
     </main>
-</body>
-</html>
+{% endblock %}

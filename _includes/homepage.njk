@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naomi's Portfolio</title>
-</head>
-<body>
-    <header>
-        <h1>Hello, I'm Naomi</h1>
-    </header>
+{% extends "base.njk" %}
     
+{% block template %}
     <main>
+        {# Iterate over projects #}
         {% for project in collections.project %}
             <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
         {% endfor %}
 
         {{ content | safe }}
     </main>
-</body>
-</html>
+{% endblock %}
