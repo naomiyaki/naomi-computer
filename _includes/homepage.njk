@@ -3,6 +3,7 @@
 {% block template %}
     <main>
         {# Iterate over projects #}
+        {{ getTags }}
         {% for project in collections.project %}
             <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
         {% endfor %}

@@ -2,6 +2,8 @@
 title: Aaron Sales UX/UI Design Case Studies
 shorttitle: Aaron Sales Design
 permalink: projects/aaron-sales-design-case-studies
+filters:
+  - web dev
 ---
 
 Around the time I started working on this portfolio website, I was talking to my friend Aaron about his goal to find a new job in the UK. He was stuck at the part where he had to write about his own work.

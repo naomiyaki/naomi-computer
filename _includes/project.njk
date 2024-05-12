@@ -3,7 +3,18 @@
 {% block template %}
     {% if title %}<h2>{{ title }}</h2>{% endif %}
 
+    {# Output all filters on the project #}
+    {% if filters %}<ul>{% endif %}
+    {% for filter in filters %}
+        <li>
+            <a href="/projects/filters/{{filter | slugify}}">{{filter}}</a>
+        </li>
+    {% endfor %}
+    {% if filters %}</ul>{% endif %}
+
     <main>
         {{ content | safe }}
+    
+        <a href="/">Return home!</a>
     </main>
 {% endblock %}
