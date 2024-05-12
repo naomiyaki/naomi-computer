@@ -1,6 +1,6 @@
 ---
 title: Cardsmithy Video Game
-shorttile: Cardsmithy
+shorttitle: Cardsmithy
 permalink: projects/cardsmithy
 filters:
   - games

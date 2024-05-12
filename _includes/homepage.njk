@@ -2,8 +2,16 @@
     
 {% block template %}
     <main>
+        {# Iterate over filters #}
+        {% if collections.filters %}
+            <ul>
+                {% for filter in collections.filters %}
+                    <li>{{filter.name}}</li>        
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         {# Iterate over projects #}
-        {{ getTags }}
         {% for project in collections.project %}
             <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
         {% endfor %}
