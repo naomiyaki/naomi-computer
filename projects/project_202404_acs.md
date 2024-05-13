@@ -1,7 +1,7 @@
 ---
 title: Aaron Sales UX/UI Design Case Studies
 shorttitle: Aaron Sales Design
-permalink: projects/aaron-sales-design-case-studies
+permalink: projects/aaron-sales-design-case-studies/
 filters:
   - web dev
 ---
