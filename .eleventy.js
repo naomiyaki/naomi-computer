@@ -1,3 +1,5 @@
+const { minify } = require('terser');
+
 // Separate major API calls into separate functions
 const getFilters = function (collectionApi) {
   const projects = collectionApi.getFilteredByTag('project');
@@ -30,9 +32,22 @@ const getProjectListings = function (collectionApi) {
   });
 };
 
+const minifyJS = async function (code, callback) {
+  // Minify JS code in Nunjucks templates
+  try {
+    const minified = await minify(code);
+    callback(null, minified.code);
+  } catch (err) {
+    console.error('Terser error: ', err);
+    // Fail gracefully with original code
+    callback(null, code);
+  }
+};
+
 // Add a custom collection with a list of filters that are used on projects, and the permalinks for the posts they contain
 module.exports = function (eleventyConfig) {
   // Get only content that matches a tag
   eleventyConfig.addCollection('filters', getFilters);
   eleventyConfig.addCollection('projectListings', getProjectListings);
+  eleventyConfig.addNunjucksAsyncFilter('minJS', minifyJS);
 };

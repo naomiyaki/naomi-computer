@@ -2,4 +2,8 @@
     permalink: scripts-bundle_homepage.js
 ---
 
-{% include "scripts/filter-projects.js" %}
+{# Capturing the script to minify #}
+{# https://www.11ty.dev/docs/quicktips/inline-js/ #}
+{% set js %}{% include "scripts/filter-projects.js" %}{% endset %}
+
+{{js | minJS | safe}}
