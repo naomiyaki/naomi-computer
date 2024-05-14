@@ -1,6 +1,6 @@
 ---
+name: Federal Public Defender
 title: Federal Public Defender Oregon Branch Airtable Export Tools
-shorttitle: Federal Public Defender
 permalink: projects/fd-airtable/
 filters:
   - web dev

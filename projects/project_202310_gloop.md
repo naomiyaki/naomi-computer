@@ -1,6 +1,6 @@
 ---
+name: No Gloop No Glory
 title: No Gloop No Glory Video Game
-shorttitle: No Gloop No Glory
 permalink: projects/no-gloop-no-glory/
 filters:
   - 3D

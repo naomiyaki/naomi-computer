@@ -2,24 +2,29 @@
     
 {% block template %}
     <main>
-        {# Iterate over filters #}
-        {% if collections.filters %}
-            <ul>
+        <div id="filter-projects">
+            {# 
+                Create a filters list statically,
+                as what these are won't change in JS
+             #}
+            <ul id="filter-list">
                 {% for filter in collections.filters %}
-                    <li>{{filter.name}}</li>        
+                    <li><button data-filter="{{filter}}">
+                        {{filter}}
+                    </button></li>        
                 {% endfor %}
             </ul>
-        {% endif %}
-
-        {# Iterate over projects #}
-        {% for project in collections.project %}
-            <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
-        {% endfor %}
-
-        {{ content | safe }}
+            <div id="projects-list"></div>
+        </div>
     </main>
 {% endblock %}
 
 {% block scripts %}
-    <script type="text/javascript" src="scripts-bundle_homepage.js"></script>
+    <script 
+        type="text/javascript" 
+        src="scripts-bundle_homepage.js"
+        id="filter-projects-script"
+        data-projects="{{collections.projectListings | dump}}"
+    >
+    </script>
 {% endblock %}

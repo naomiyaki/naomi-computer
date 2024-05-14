@@ -1,6 +1,6 @@
 ---
+name: Cardsmithy
 title: Cardsmithy Video Game
-shorttitle: Cardsmithy
 permalink: projects/cardsmithy/
 filters:
   - games
