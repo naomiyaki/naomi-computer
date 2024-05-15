@@ -5,6 +5,11 @@ permalink: /styles-bundle.css
 {# Style includes document CSS can be used here, but don't! It's all _includes/styles #}
 {# See "Use an Eleventy Template" https://www.11ty.dev/docs/assets/ #}
 
+{% include "styles/fonts.css" %}
+
 {% include "styles/normalize.css" %}
 {% include "styles/root-properties.css" %} {# NB: root properties can actually be declared anywhere, this doesn't have to be at the top #}
 {% include "styles/base.css" %}
+
+{# Components #}
+{% include "styles/components/header-home.css" %}

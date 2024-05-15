@@ -1,0 +1,49 @@
+
+/*
+    Philosopher is designed by Jovanny Lemonad (who also goes by Ivan Gladkikh). 
+    He is a co-founder of TrueType: https://typetype.org/freefonts/
+    You can get this font free there, and also on Google Fonts
+    I'm not using it here, but there is a really cool Arabic font called
+    El Messiri based on it by Mohamed Gaber: 
+    https://github.com/Gue3bara/El-Messiri  (you can also get it on Gooogle Fonts)
+*/
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/assets/fonts/philosopher-regular.woff2') format('woff2'),
+         url('/assets/fonts/philosopher-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/assets/fonts/philosopher-bold.woff2') format('woff2'),
+         url('/assets/fonts/philosopher-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/assets/fonts/philosopher-italic.woff2') format('woff2'),
+         url('/assets/fonts/philosopher-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* 
+    Croissant One is designed by Eduardo Tunni: https://www.behance.net/tipo_ar?locale=en_US
+    and comes from: https://fonts.google.com/specimen/Croissant+One
+*/
+@font-face {
+    font-family: 'Croissant One';
+    src: url('/assets/fonts/croissantone-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/croissantone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+    WebFont conversion from FontSquirrel: https://www.fontsquirrel.com/
+    They also have really great fonts there!
+*/

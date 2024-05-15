@@ -2,19 +2,51 @@
     
 {% block template %}
     <main>
-        <div id="filter-projects">
-            {# 
-                Create a filters list statically,
-                as what these are won't change in JS
-             #}
-            <ul id="filter-list">
-                {% for filter in collections.filters %}
-                    <li><button data-filter="{{filter}}">
-                        {{filter}}
-                    </button></li>        
-                {% endfor %}
-            </ul>
-            <div id="projects-list"></div>
+        <div class="container">
+            <header class="header-home">
+                {# Full width header with castle frame and changable inner image #}
+                {# Image should be 828 * 730 (or larger, with the same ratio) at 2x #}
+                <figure>
+                    <picture class="window-view">
+                        <source 
+                            srcset="/assets/images/heading-view-robbi@2x.jpg 920w"/>
+                        <img src="/assets/images/heading-view-robbi.jpg"/>
+                    </picture>
+
+                    <picture class="window">
+                        <source 
+                            srcset="/assets/images/header-castle-window@2x.png 2260w,
+                                    /assets/images/header-castle-window.png 1130w"/>
+                        <img src="/assets/images/header-castle-window.png"/>
+                    </picture>
+                </figure>
+                <div class="introduction">
+                    <span class="greeting">
+                        Hello! I'm Naomi
+                    </span>
+                    <h2>
+                        Creator who makes stories accessible with
+                        art, writing, and code
+                    </h2>
+                </div>
+            </header>
+            <div id="filter-projects">
+                {# 
+                    Create a filters list statically,
+                    as what these are won't change in JS
+                 #}
+                <ul id="filter-list">
+                    {% for filter in collections.filters %}
+                        <li><button data-filter="{{filter}}">
+                            {{filter}}
+                        </button></li>        
+                    {% endfor %}
+                </ul>
+                <div id="projects-list"></div>
+            </div>
+            <div>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </div>
         </div>
     </main>
 {% endblock %}

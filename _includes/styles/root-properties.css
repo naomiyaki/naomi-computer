@@ -1,3 +1,16 @@
 :root {
+    /* Colors */
     --neutral-7: #3a3a3a;
+
+    /* Typography */
+    --font-size-base: 16px;
+    --font-copy: 'Philosopher', sans-serif;
+    --font-header: 'Croissant One', serif;
+
+    /* Media Queries */
+    /* 
+        These can't be used as query parameters,
+        so refer to this list when doing media queries!
+    */
+    --desktop-base: 1170px;
 }

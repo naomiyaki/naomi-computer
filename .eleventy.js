@@ -50,4 +50,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('filters', getFilters);
   eleventyConfig.addCollection('projectListings', getProjectListings);
   eleventyConfig.addNunjucksAsyncFilter('minJS', minifyJS);
+
+  // Passthrough assets for non-bundled like images and fonts
+  eleventyConfig.addPassthroughCopy('assets');
 };

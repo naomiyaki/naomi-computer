@@ -1,0 +1,51 @@
+.header-home {
+    position: relative;
+}
+
+.header-home img {
+    width: 100%;
+}
+
+.header-home .window {
+}
+
+.header-home .window-view img {
+    position: absolute;
+    top: 6.2vw;
+    left: 8vw;
+    max-width: 414px;
+    width: 35.385%;
+    z-index: -1;
+}
+
+@media (min-width: 1170px) {
+    .header-home .window-view img {
+        top: 73px;
+        left: 94px;
+    }
+}
+
+.header-home .introduction {
+    position: absolute;
+    top: 10.94vw;
+    left: 48.29vw;
+    max-width: 445px;
+}
+
+@media (min-width: 1170px) {
+    .header-home .introduction {
+        top: 128px;
+        left: 565px;
+    }
+}
+
+.header-home .greeting {
+    font-size: 40px;
+    font-family: var(--font-header);
+    color: #F6A6A7;
+}
+
+.header-home .introduction h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
