@@ -30,20 +30,22 @@
                     </h2>
                 </div>
             </header>
-            <div id="filter-projects">
-                {# 
-                    Create a filters list statically,
-                    as what these are won't change in JS
-                 #}
-                <ul id="filter-list">
-                    {% for filter in collections.filters %}
-                        <li><button data-filter="{{filter}}">
-                            {{filter}}
-                        </button></li>        
-                    {% endfor %}
-                </ul>
-                <div id="projects-list"></div>
+            <div class="subhead-home">
+                <div class="callout-0">
+                    <figure class="sticker-values">
+                        <img src="/assets/images/subhead-sticker-values.png"/>
+                        <figcaption>I want to do work that contributes to my values</figcaption>
+                    </figure>
+                </div>
+                <div class="callout-1">
+                    <figure class="sticker-3d">
+                        <img src="/assets/images/subhead-sticker-3d.png"/>
+                        <figcaption>Currently excited about 3D modeling and Swift</figcaption>
+                    </figure>
+                </div>
             </div>
+
+            {% include 'filter-projects.njk' %}
             <div>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </div>

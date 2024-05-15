@@ -1,0 +1,40 @@
+.filter-projects header {
+    margin-top: 100px;  /* Temporary positioning */
+    text-align: center;
+}
+
+.filter-projects h3 {
+    margin: 0;
+    padding-bottom: 0.35em;
+}
+
+.filter-projects header p {
+    width: 356px;
+    margin: 0 auto;
+    font-size: .875em;
+}
+
+.filter-projects .app {
+    display: flex;
+}
+
+.filter-projects .filters li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.filter-projects .filters .background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.filter-projects .filters button {
+    display: block;
+    cursor: pointer;
+    width: 230px;
+    padding: .85em 0 .85em .8em;
+    text-align: left;
+    font-family: var(--font-header);
+    font-size: 1.4em;
+}

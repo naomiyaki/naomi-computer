@@ -1,0 +1,41 @@
+<div class="filter-projects" id="filter-projects">
+    <header>
+        <h3 class="heading-3">
+            See Some Projects
+        </h3>
+        <p>
+            Browse on through, or try one of the filters on the left 
+            if you're looking for something specific
+        </p>
+    </header>
+    {# 
+        Create a filters list statically,
+        as what these are won't change in JS
+     #}
+     <div class="app container">
+        <div class="filters">
+            <ul class="unstyled-list" id="filter-list">
+                {% for filter in collections.filters %}
+                    <li>
+                        <img class="background" src="/assets/images/filter-projcets-filter-ticket.png"/>
+                        <button class="unstyled-button" data-filter="{{filter}}">
+                            {{filter | capitalize}}
+                        </button>
+                    </li>        
+                {% endfor %}
+            </ul>
+         </div>
+        <div class="projects-list" id="projects-list"></div>
+     </div>
+</div>
+
+{# 
+    Note that this component requires a script 
+    to be called in its parent component (or somewhere on the body)
+
+    It's not included here in case more than one script is being
+    called in the page template.
+
+    Probably, I can use nunjucks to come up with a clever way to
+    mash these together though
+#}
