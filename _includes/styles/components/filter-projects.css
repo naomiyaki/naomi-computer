@@ -19,22 +19,37 @@
 }
 
 .filter-projects .filters li {
-    position: relative;
     margin-bottom: 15px;
+    transition: transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
+    transform-origin: center left;
 }
 
 .filter-projects .filters .background {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
     width: 100%;
 }
 
 .filter-projects .filters button {
+    position: relative;
     display: block;
     cursor: pointer;
-    width: 230px;
+    width: 9.583em;
     padding: .85em 0 .85em .8em;
     text-align: left;
     font-family: var(--font-header);
-    font-size: 1.4em;
+    font-size: 1.25em;
+}
+
+.filter-projects .filters li:hover {
+    transform: scale(1.15, 1.15);
+    transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.filter-projects .filters li:hover + li,
+.filter-projects .filters li:has(+ li:hover) {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1);
 }
