@@ -1,7 +1,7 @@
 ---
 name: Cardsmithy
 title: Cardsmithy Video Game
-permalink: projects/cardsmithy/
+thumb: thumbnail-rylan
 filters:
   - games
   - illustration

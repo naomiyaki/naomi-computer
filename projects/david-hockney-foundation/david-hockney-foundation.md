@@ -1,9 +1,11 @@
 ---
 name: David Hockney Foundation
 title: David Hockney Foundation Website
-permalink: projects/david-hockney-foundation/
+thumb: thumbnail-divine.jpg
 filters:
   - web dev
 ---
 
 Wobsite
+
+![Portrait of divine](thumbnail-divine.jpg)

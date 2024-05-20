@@ -1,7 +1,7 @@
 ---
 name: Aaron Sales Design
 title: Aaron Sales UX/UI Design Case Studies
-permalink: projects/aaron-sales-design-case-studies/
+thumb: thumbnail-beard.jpg
 filters:
   - web dev
 ---

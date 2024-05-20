@@ -51,6 +51,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('projectListings', getProjectListings);
   eleventyConfig.addNunjucksAsyncFilter('minJS', minifyJS);
 
+  // Adds jpg and png files inside of collection item directories without
+  // touching the usual config defaults
+  eleventyConfig.addTemplateFormats(['jpg', 'png']);
+
   // Passthrough assets for non-bundled like images and fonts
   eleventyConfig.addPassthroughCopy('assets');
 };

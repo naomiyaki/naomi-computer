@@ -1,7 +1,7 @@
 ---
 name: No Gloop No Glory
 title: No Gloop No Glory Video Game
-permalink: projects/no-gloop-no-glory/
+thumb: thumbnail-glory.jpg
 filters:
   - 3D
   - games

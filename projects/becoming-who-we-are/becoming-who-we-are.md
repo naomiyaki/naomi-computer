@@ -1,7 +1,7 @@
 ---
 name: Becoming Who We Are
 title: Becoming Who We Are Comic Anthology
-permalink: projects/becoming-who-we-are/
+thumb: thumbnail-cover.jpg
 filters:
   - Comics
 ---
