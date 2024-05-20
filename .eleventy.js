@@ -27,6 +27,7 @@ const getProjectListings = function (collectionApi) {
     return {
       name: project.data.name,
       filters: project.data.filters,
+      image: project.data.thumb,
       url: project.url
     };
   });

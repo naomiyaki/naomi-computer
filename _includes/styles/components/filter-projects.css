@@ -1,3 +1,4 @@
+/* Filters */
 .filter-projects header {
     margin-top: 100px;  /* Temporary positioning */
     text-align: center;
@@ -16,6 +17,7 @@
 
 .filter-projects .app {
     display: flex;
+    justify-content: space-between;
 }
 
 .filter-projects .filters li {
@@ -40,7 +42,7 @@
     padding: .85em 0 .85em .8em;
     text-align: left;
     font-family: var(--font-header);
-    font-size: 1.25em;
+    font-size: 1.3em;
 }
 
 .filter-projects .filters li:hover {
@@ -52,4 +54,85 @@
 .filter-projects .filters li:has(+ li:hover) {
     transform: scale(1.05, 1.05);
     transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+
+/* Project Listings */
+.filter-projects .projects-list {
+    width: 75.378%;
+}
+
+.filter-projects .projects-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-projects .projects-list li {
+    width: 29.652%;
+    margin-left: 5.5%;
+}
+
+.filter-projects .projects-list li:first-child,
+.filter-projects .projects-list li:nth-child(3n + 4) {
+    margin-left: 0;
+}
+
+.filter-projects .projects-list a {
+    display: block;
+    color: var(--neutral-7);
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.filter-projects .projects-list figure {
+    position: relative;
+    padding-bottom: 3.25em;
+}
+
+/* TODO: Maybe convert mask images to clip paths */
+.filter-projects .projects-list .thumb {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    mask: url(/assets/images/project-listing-tv-mask.svg);
+    height: 0px;
+    padding-top: 72.597%;
+}
+
+.filter-projects .projects-list figcaption {
+    padding-top: .4em;
+}
+
+.filter-projects .projects-list figure:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 102%;
+    left: -2%;
+    height: 100%;
+    background-image: url(/assets/images/project-listing-frame01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0.05s;
+}
+
+.filter-projects .projects-list a:hover {
+    transform: translate(0px, -.6em);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.filter-projects .projects-list a:hover .thumb {
+    box-shadow: inset 0px 0px 24px 8px rgba(14, 13, 24, 0.75);
+}
+
+.filter-projects .projects-list a:hover figure:before {
+    opacity: 1;
+    transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0s;
 }

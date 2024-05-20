@@ -29,13 +29,18 @@ const createProjectListMarkup = function (projects, filter) {
 
   // Build the markup with the filtered projects
   return `
-        <ul>
+        <ul class="unstyled-list">
             ${filtered
               .map((project) => {
                 return `
                     <li>
                         <a href="${project.url}">
-                            ${project.name}
+                          <figure>
+                            <div class="thumb" style="background-image: url('${project.url}${project.image}');"></div>
+                            <figcaption>
+                              ${project.name}
+                            </figcaption>
+                          </figure>
                         </a>
                     </li>
                 `;
