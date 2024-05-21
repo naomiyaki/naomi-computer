@@ -58,9 +58,148 @@
 
 
 /* Project Listings */
-.filter-projects .projects-list {
+/* -------------------- */
+.filter-projects .projects-list-container {
     width: 75.378%;
 }
+
+.filter-projects .filter-sheet {
+    --nav-height: 60px;
+    --border-image: url('/assets/images/custom-border02.png') 9;
+    --border-style: 4px solid;
+}
+
+/* Filter sheet */
+/* Just an ol' table */
+.filter-projects .filter-header {
+    width: 100%;
+    /* border: 3px solid #eaeaea; */
+    border-spacing: 0;
+    border-image: var(--border-image);
+    border-width: 4px;
+    border-style: solid;
+}
+
+.filter-projects .filter-header .header-space td {
+    height: 1.875em;
+    border-image: var(--border-image);
+    border-bottom: var(--border-style);
+}
+
+.filter-projects .filter-header .label {
+    position: relative;    
+    height: var(--nav-height);
+    border-image: var(--border-image);
+    border-right: var(--border-style);
+    padding: 0 .23em;
+}
+
+.filter-projects .filter-header .label span {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    left: calc(50% - .5em);
+    width: var(--nav-height);
+    text-align: center; 
+    transform: rotate(270deg);
+    transform-origin: left top;
+}
+
+.filter-projects .filter-header .filter-name {
+    position: relative;
+    font-size: 1.4em;
+    padding: 0px 0.7em;
+    width: 28%;
+    border-image: var(--border-image);
+    border-right: var(--border-style);
+    background-image: url()
+}
+
+.filter-projects .filter-header .filter-name:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background-image: url(/assets/images/filter-ticket-label.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.filter-projects .filter-header .filters-clear {
+    display: flex;
+    align-items: center;
+    font-size: 1.063em;
+    cursor: pointer;
+    padding: 0px 1em 0;
+}
+
+.filter-projects .filter-header .filters-clear img {
+    width: 30px;
+    height: auto;
+    padding-right: .4em;
+}
+
+.filter-projects .filter-sheet .filter-container {
+    border-image: var(--border-image);
+    border-width: 4px;
+    border-style: solid;
+    border-top: 0;
+    margin-top: -4px;
+    padding: 2.25em 1.875em;
+}
+
+
+/* .filter-projects .filter-sheet .header-deco {
+    height: 1.875em;
+    border: 3px solid #eaeaea;;
+}
+
+.filter-projects .filter-sheet .filter-container {
+    border: 3px solid #eaeaea;;
+    border-top: 0;
+    padding: 0 1.875em;
+}
+
+.filter-projects .filter-sheet .header-nav {
+    --nav-height: 64px;
+    border: 3px solid #eaeaea;;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.filter-projects .filter-sheet .label-vertical {
+    --label-width: 2em;
+
+    position: relative;
+    border-right: 3px solid #eaeaea;;
+    font-weight: 600;
+    height: var(--nav-height);
+    width: var(--label-width);
+}
+
+.filter-projects .filter-sheet .label-vertical span {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    left: calc(50% - .5em);
+    width: var(--nav-height);
+    text-align: center; 
+    transform: rotate(270deg);
+    transform-origin: left top;
+}
+
+.filter-projects .filter-sheet .filter-name {
+    font-size: 1.4em;
+    padding: 0px 0.7em;
+    border-right: 3px solid #eaeaea;;
+    height: var(--nav-height);
+} */
+
 
 .filter-projects .projects-list ul {
     display: flex;
