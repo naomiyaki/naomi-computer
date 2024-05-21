@@ -15,6 +15,19 @@ const projectsList = document.getElementById('projects-list');
 // Parse the text from the template
 const projects = JSON.parse(projectsText);
 
+// Add and remove a parent class when an item is hovered
+// for further styling in CSS
+const addHoverClass = function (e) {
+  projectsList.classList.add('item-hovered');
+  cancelDebounce = true;
+};
+
+const removeHoverClass = async function (e) {
+  // Normally would require a debounce, but CSS is taking care
+  // of the delayed transition
+  projectsList.classList.remove('item-hovered');
+};
+
 const createProjectListMarkup = function (projects, filter) {
   // Reduce the projects array by a filter,
   // if one has been passed in
@@ -34,7 +47,11 @@ const createProjectListMarkup = function (projects, filter) {
               .map((project) => {
                 return `
                     <li>
-                        <a href="${project.url}">
+                        <a 
+                          onmouseover="addHoverClass(event)" 
+                          onmouseleave="removeHoverClass(event)"
+                          href="${project.url}"
+                        >
                           <figure>
                             <div class="thumb" style="background-image: url('${project.url}${project.image}');"></div>
                             <figcaption>
