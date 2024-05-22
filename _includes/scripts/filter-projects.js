@@ -15,17 +15,35 @@ const projectsList = document.getElementById('projects-list');
 // Parse the text from the template
 const projects = JSON.parse(projectsText);
 
-// Add and remove a parent class when an item is hovered
-// for further styling in CSS
-const addHoverClass = function (e) {
-  projectsList.classList.add('item-hovered');
-  cancelDebounce = true;
-};
+// Heading markup for when a filter is applied
+const createFilterHeaderMarkup = function (filter) {
+  // Todo: Built a more centralized function to capitalize every word
+  // in a filter, and make it accessible to njk and js
+  const capitalizedFilter = filter.charAt(0).toUpperCase() + filter.slice(1);
 
-const removeHoverClass = async function (e) {
-  // Normally would require a debounce, but CSS is taking care
-  // of the delayed transition
-  projectsList.classList.remove('item-hovered');
+  return `
+    <table class="filter-header">
+    <tbody>
+        <tr class="header-space">
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr class="header-nav">
+            <td class="label">
+                <span>Filter</span>
+            </td>
+            <td class="filter-name">
+                ${capitalizedFilter}
+            </td>
+            <td>
+                <button onclick="showAllProjects(event)" class="filters-clear unstyled-button">
+                    <img src="/assets/images/filters-clear-button01.png"/>
+                    Show All Projects
+                </button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  `;
 };
 
 const createProjectListMarkup = function (projects, filter) {
@@ -41,34 +59,50 @@ const createProjectListMarkup = function (projects, filter) {
   });
 
   // Build the markup with the filtered projects
+  // Only use "filter-container class" if there's
+  // an active filter.
   return `
-        <ul class="unstyled-list">
-            ${filtered
-              .map((project) => {
-                return `
-                    <li>
-                        <a 
-                          onmouseover="addHoverClass(event)" 
-                          onmouseleave="removeHoverClass(event)"
-                          href="${project.url}"
-                        >
-                          <figure>
-                            <div class="thumb" style="background-image: url('${project.url}${project.image}');"></div>
-                            <figcaption>
-                              ${project.name}
-                            </figcaption>
-                          </figure>
-                        </a>
-                    </li>
-                `;
-              })
-              .join('')}
-        </ul>
-    `;
+    ${filter ? createFilterHeaderMarkup(filter) : ''}
+    <div class="${filter ? 'filter-container' : ''}">
+      <ul class="unstyled-list">
+          ${filtered
+            .map((project) => {
+              return `
+                  <li>
+                      <a 
+                        onmouseover="addHoverClass(event)" 
+                        onmouseleave="removeHoverClass(event)"
+                        href="${project.url}"
+                      >
+                        <figure>
+                          <div class="thumb" style="background-image: url('${project.url}${project.image}');"></div>
+                          <figcaption>
+                            ${project.name}
+                          </figcaption>
+                        </figure>
+                      </a>
+                  </li>
+              `;
+            })
+            .join('')}
+      </ul>
+    </div>
+  `;
 };
 
 // Set the default markup for the projects list
-projectsList.innerHTML = createProjectListMarkup(projects);
+// This function is also used for "clearing" filters
+const showAllProjects = function (e) {
+  if (e) {
+    // Prevent any form submissions
+    e.preventDefault();
+  }
+
+  projectsList.innerHTML = createProjectListMarkup(projects);
+};
+
+// Run the function when the script starts;
+showAllProjects();
 
 // Set up the filters so that clicking them resets the HTML
 const filterList = document.getElementById('filter-list');
@@ -83,3 +117,16 @@ filters.forEach((element) => {
     projectsList.innerHTML = createProjectListMarkup(projects, filter);
   });
 });
+
+// Add and remove a parent class when an item is hovered
+// for further styling in CSS
+const addHoverClass = function (e) {
+  projectsList.classList.add('item-hovered');
+  cancelDebounce = true;
+};
+
+const removeHoverClass = async function (e) {
+  // Normally would require a debounce, but CSS is taking care
+  // of the delayed transition
+  projectsList.classList.remove('item-hovered');
+};
