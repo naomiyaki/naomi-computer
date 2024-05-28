@@ -1,0 +1,22 @@
+.bg-cloud-right:before, .bg-cloud-left:before {
+    content:"";
+    position: absolute;
+    z-index: -100;
+    background-size: contain;
+}
+
+.bg-cloud-right:before {
+    width: 660px;
+    height: 400px;
+    background-image: url(/assets/images/cloud01_dpad-gradient.png);
+    right: -37px;   
+    margin-top: -70px;
+}
+
+.bg-cloud-left:before {
+    width: 540px;
+    height: 265px;
+    background-image: url(/assets/images/cloud02_dpad-gradient.png);
+    left: -55px;
+    margin-top: 300px;
+}
