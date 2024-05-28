@@ -1,3 +1,66 @@
 .mail-external {
     margin-top: -120px;
+    text-align: center;
+}
+
+.mail-external .container {
+    padding-top: 325px;
+}
+
+.mail-external .mail-logo {
+    display: block;
+}
+
+.mail-external .mail-logo img {
+    width: 376px;
+    margin-left: 69px;
+}
+
+.mail-external .mail-callout {
+    position: relative;
+    width: 630px;
+    margin: -92px auto 0;
+}
+
+.mail-external .mail-callout:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: calc(100% + 30px);
+    z-index: -2;
+    top: -30px;
+    border-image-source: url(/assets/images/mail_callout-border-box.png);
+    border-image-slice: 218 fill;
+    border-image-width: 109;
+    border-image-repeat: repeat;
+    border-style: solid;
+}
+
+.mail-external .mail-text {
+    display: block;
+    text-decoration: none;
+    color: var(--neutral-07);
+}
+
+.mail-external .mail-callout p {
+    font-size: 1.75em;
+    margin: .3em auto;
+}
+
+.mail-external .mail-callout .prompt {
+    font-size: 2em;
+    margin: .5em auto;
+    font-family: var(--font-header);
+}
+
+.mail-external .socials {
+    width: 100%;
+    max-width: 380px;
+    margin: 2em auto;
+    padding-bottom: 1em;
+}
+
+.mail-external .socials p {
+    font-size: 0.875em;
 }

@@ -1,10 +1,18 @@
-.bg-dragon:before {
-    content: "";
+.bg-dragon {
     position: absolute;
     width: 1525px;
     height: 1064px;
-    right: -150px;
+    overflow: hidden;
+    right: 0;
     z-index: -100;
+}
+
+.bg-dragon:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -150px;
     background-image: url(/assets/images/dragon_summer-gradient.png);
     background-size: contain;
     background-repeat: no-repeat;
