@@ -1,6 +1,11 @@
 {% extends "base.njk" %}
 
 {% block template %}
+    <div class="detail-hero">
+        <img src="{{hero}}"/>
+        <img src="{{logo}}"/>
+        <img class="hero-frame" src="/assets/images/detail-frame-nose@2x.png"/>
+    </div>
     {% if title %}<h2>{{ title }}</h2>{% endif %}
 
     {# Output all filters on the project #}

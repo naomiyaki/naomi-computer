@@ -1,0 +1,14 @@
+.detail-hero {
+    position: relative;
+    width: 100%;
+    max-width: 955px;
+    margin: 0px auto;
+}
+
+.detail-hero .hero-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}

@@ -75,7 +75,9 @@ const createProjectListMarkup = function (projects, filter) {
                         href="${project.url}"
                       >
                         <figure>
-                          <div class="thumb" style="background-image: url('${project.url}${project.image}');"></div>
+                          <div class="thumb">
+                            <div class="thumb-image" style="background-image: url('${project.url}${project.image}');"></div>
+                          </div>
                           <figcaption>
                             ${project.name}
                           </figcaption>

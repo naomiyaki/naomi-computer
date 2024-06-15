@@ -32,6 +32,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
+    filter: drop-shadow(0px 2px 1px rgba(0,0,0,.4))
 }
 
 .filter-projects .filters button {
@@ -181,17 +182,30 @@
 }
 
 /* TODO: Maybe convert mask images to clip paths */
+/* Thumbnail responds to ratio using the ol' padding trick */
 .filter-projects .projects-list .thumb {
-    width: 100%;
     position: relative;
-    background-size: cover;
-    mask: url(/assets/images/project-listing-tv-mask.svg);
+    width: 100%;
     height: 0px;
     padding-top: 72.597%;
+    /* Box shadow has to be on parent elemnt to not get clipped,
+    but respects the mask through CSS magic */
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,.2))
+}
+
+/* Thumb-image fills out padded element so it can have shadows and stuff */
+.filter-projects .projects-list .thumb-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mask: url(/assets/images/project-listing-tv-mask.svg);
+    background-size: cover;
 }
 
 /* An empty pseudo element for darkening on hover */
-.filter-projects .projects-list .thumb:after {
+.filter-projects .projects-list .thumb-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -224,12 +238,12 @@
 }
 
 /* Shaded overlay for all items that aren't hovered */
-.filter-projects .projects-list.item-hovered a .thumb:after {
+.filter-projects .projects-list.item-hovered a .thumb-image:after {
     opacity: 1;
     transition: opacity .2s cubic-bezier(.37,0,.63,1);
 }
 
-.filter-projects .projects-list.item-hovered a:hover .thumb:after {
+.filter-projects .projects-list.item-hovered a:hover .thumb-image:after {
     opacity: 0;
     transition: opacity .3s cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -240,7 +254,7 @@
     transition: transform 0.25s cubic-bezier(.21,1.5,.64,1);
 }
 
-.filter-projects .projects-list a:hover .thumb {
+.filter-projects .projects-list a:hover .thumb-image {
     box-shadow: inset 0px 0px 24px 8px rgba(14, 13, 24, 0.75);
 }
 
