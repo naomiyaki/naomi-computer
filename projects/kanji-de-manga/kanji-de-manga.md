@@ -1,7 +1,9 @@
 ---
 name: Kanji de Manga
 title: Kanji de Manga Japanese Language Learning Comic Series
-# thumb: thumbnail-cover.jpg
+thumb: thumbnail-cover.jpg
+hero: hero.jpg
+logo: logo.png
 filters:
   - comics
   - translation

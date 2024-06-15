@@ -6,4 +6,4 @@ filters:
   - web dev
 ---
 
-I can't say too much about this government project! I need to check with them before I write anything.
+External source, need feedback before publishing.
