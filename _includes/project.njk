@@ -1,12 +1,44 @@
 {% extends "base.njk" %}
 
 {% block template %}
-    <div class="detail-hero">
-        <img src="{{hero}}"/>
-        <img src="{{logo}}"/>
-        <img class="hero-frame" src="/assets/images/detail-frame-nose@2x.png"/>
-    </div>
-    {% if title %}<h2>{{ title }}</h2>{% endif %}
+    {% if hero %}
+        <div class="detail-hero">
+            <div class="hero-crop">
+                <div class="hero-image" style="background-image: url({{hero}});"></div>
+            </div>
+            <img class="hero-frame" src="/assets/images/detail-frame-nose@2x.png"/>
+            <img class="hero-logo" src="{{logo}}"/>
+        </div>
+    {% endif %}
+
+    <header class="project-header">
+        <div class="header-copy">
+            <h1>{{name}}</h1>
+            <div class="project-tagline">
+                {{tagline}}
+            </div>
+        </div>
+        <div class="project-info">
+            <div class="horizontal-rule"></div>
+            <div class="info-screen">
+                <img class="screen-top" src="/assets/images/project_info-screen_top@2x.png"/>
+                <ul class="info-list unstyled-list">
+                    {% for detail in info %}
+                        <li class="info-{{detail.type}}">
+                            <div class="info-name">
+                                {{detail.name}}
+                            </div>
+                            <div class="info-value">
+                                {{detail.value}}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <img class="screen-bottom" src="/assets/images/project_info-screen_bottom@2x.png" />
+                {# <img class="screen-frame" src="/assets/images/project-info_screen@2x.png"/> #}
+            </div>
+        </div>
+    </header>
 
     {# Output all filters on the project #}
     {% if filters %}<ul>{% endif %}

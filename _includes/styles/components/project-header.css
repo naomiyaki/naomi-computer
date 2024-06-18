@@ -1,0 +1,128 @@
+.project-header {
+    width: 100%;
+    max-width: 1145px;
+    margin: 0 auto;
+    padding-top: 1.375em;
+}
+
+.project-header .header-copy {
+    padding: 0 2.625em;
+}
+
+.project-header h1 {
+    font-family: var(--font-header);
+    font-size: 1.938em;
+}
+
+.project-header .project-tagline {
+    font-size: 1.188;
+    font-style: italic;
+}
+
+.project-header .project-info {
+    display: flex;
+    align-items: center;
+    margin-top: -150px;
+}
+
+.project-header .project-info .horizontal-rule {
+    width: 71.179%;
+    height: 14px;
+    margin-top: 25px;
+    background-image: url("/assets/images/project-header_hr.png");
+    background-size: 815px 14px;
+}
+
+.project-header .project-info .info-screen {
+    width: 28.821%;
+    position: relative;
+}
+
+.info-screen .screen-top {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.project-info .info-list {
+    display: block;
+    position: relative;
+    /* List tucks under the screen-top graphic */
+    margin-top: -68px;
+    margin-bottom: -52px;
+    padding: 0 67px 0 21px;
+}
+
+.project-info .info-list:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    /* Same numbers as list margin-top and bottom from above */
+    height: calc(100% - 68px - 52px);
+    top: 68px;
+    left: 0;
+    background-image: url("/assets/images/project_info-screen_middle@2x.png");
+    background-size: 100%, auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.project-info .info-list li {
+    width: 100%;
+    margin: 0;
+    background-color: var(--accent-0);
+}
+
+.project-info .info-list li + li {
+    margin-top: 5px;
+}
+
+.project-info .info-list .info-name {
+    font-size: 1.063em;
+    color: var(--neutral-0);
+}
+
+.project-info .info-list .info-value {
+    font-size: .938em;
+}
+
+.project-info .info-list li.info-text {
+    display: flex;
+    align-items: center;
+    border-top: 4px solid var(--accent-0);
+    border-bottom: 4px solid var(--accent-0);
+}
+
+.project-info .info-list li.info-text .info-name {
+    padding: 0 .706em;
+    width: 40%;
+}
+
+.project-info .info-list li.info-text .info-value {
+    background-color: #fff;
+    padding: .35em 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 1em 0 0 1em;
+}
+
+.project-info .info-list li.info-longtext .info-name {
+    padding: 0.471em .706em;
+}
+
+.project-info .info-list li.info-longtext .info-value {
+    background-color: #fff;
+    border-radius: 1em 1em 0 0;
+    padding: .3em 1em 1.25em;
+}
+
+.project-info .info-screen .screen-bottom {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}

@@ -1,12 +1,23 @@
 ---
 name: Kanji de Manga
 title: Kanji de Manga Japanese Language Learning Comic Series
+tagline: Japanese language learning comic series
 thumb: thumbnail-cover.jpg
 hero: hero.jpg
 logo: logo.png
 filters:
   - comics
   - translation
+info:
+  - name: Years
+    type: text
+    value: 2007-2010
+  - name: Location
+    type: text
+    value: Saitama, Japan
+  - name: Roles
+    type: longtext
+    value: Translation, Graphic Design, Book Layout
 ---
 
 I first encountered the Kanji de Manga series as a college intern at Japanime/Manga University publishing. I'm not sure if I had seen the series before, but I felt like I had. As a teen, I wanted to learn Japanese in no small part so that I could read lots of Japanese comics. I used Japanese comics as a learning resource along the way - going over characters again and again until I could identify them, even if I didn't know what the text was saying yet.

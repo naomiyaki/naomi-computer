@@ -201,6 +201,7 @@
     top: 0;
     left: 0;
     mask: url(/assets/images/project-listing-tv-mask.svg);
+    -webkit-mask: url(/assets/images/project-listing-tv-mask.svg);
     background-size: cover;
 }
 
