@@ -1,0 +1,12 @@
+.default-copy {
+    font-size: 1rem;
+}
+
+.default-copy p + p {
+    margin-top: 2.5em;
+}
+
+/* Default image, outside a paragraph, with no classes applied */
+.default-copy img {
+    
+}

@@ -1,6 +1,6 @@
 ---
 name: Kanji de Manga
-title: Kanji de Manga Japanese Language Learning Comic Series
+title: Japanese Language Learning Comic Series
 tagline: Japanese language learning comic series
 thumb: thumbnail-cover.jpg
 hero: hero.jpg

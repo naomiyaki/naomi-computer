@@ -13,13 +13,16 @@
 
     <header class="project-header">
         <div class="header-copy">
-            <h1>{{name}}</h1>
+            <h1>{{name | safe}}</h1>
             <div class="project-tagline">
                 {{tagline}}
             </div>
         </div>
+        <div class="horizontal-rule"></div>
+    </header>
+
+    <div class="project-body">
         <div class="project-info">
-            <div class="horizontal-rule"></div>
             <div class="info-screen">
                 <img class="screen-top" src="/assets/images/project_info-screen_top@2x.png"/>
                 <ul class="info-list unstyled-list">
@@ -35,10 +38,15 @@
                     {% endfor %}
                 </ul>
                 <img class="screen-bottom" src="/assets/images/project_info-screen_bottom@2x.png" />
-                {# <img class="screen-frame" src="/assets/images/project-info_screen@2x.png"/> #}
             </div>
         </div>
-    </header>
+        <main class="default-copy">
+            {{ content | safe }}
+        </main>
+    </div>
+    <div class="project-footer">
+        <a href="/">Return home!</a>
+    </div>
 
     {# Output all filters on the project #}
     {% if filters %}<ul>{% endif %}
@@ -48,11 +56,4 @@
         </li>
     {% endfor %}
     {% if filters %}</ul>{% endif %}
-
-    <main>
-        <img src="{{thumb}}"/>
-        {{ content | safe }}
-    
-        <a href="/">Return home!</a>
-    </main>
 {% endblock %}

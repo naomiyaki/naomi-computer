@@ -1,0 +1,13 @@
+.project-body {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.project-body main p {
+    width: 100%;
+    max-width: var(--content-width);
+    /* Top margin is declared in default-copy css */
+    margin-right: auto;
+    margin-left: auto;
+}

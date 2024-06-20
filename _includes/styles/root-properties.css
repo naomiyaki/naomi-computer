@@ -9,6 +9,10 @@
     --font-copy: 'Philosopher', sans-serif;
     --font-header: 'Croissant One', serif;
 
+    /* Structure */
+    --max-width: 1390px;
+    --content-width: 990px;
+
     /* Media Queries */
     /* 
         These can't be used as query parameters,

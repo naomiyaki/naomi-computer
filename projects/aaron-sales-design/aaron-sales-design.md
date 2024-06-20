@@ -4,6 +4,16 @@ title: Aaron Sales UX/UI Design Case Studies
 thumb: thumbnail-beard.jpg
 filters:
   - web dev
+info:
+  - name: Friend
+    type: text
+    value: Sam
+  - name: Favorite Fruits
+    type: longtext
+    value: Strawbs, Kiwis, Cherries, Granny-Smith, Satsumas, Cheese, Raspberries, Dragon Fruit
+  - name: Feet
+    type: text
+    value: Yep
 ---
 
 Around the time I started working on this portfolio website, I was talking to my friend Aaron about his goal to find a new job in the UK. He was stuck at the part where he had to write about his own work.
