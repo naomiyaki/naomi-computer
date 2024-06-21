@@ -1,0 +1,6 @@
+body.pagetype-detail {
+    background-image: url(/assets/images/detail_background-left_dogwood-retro.svg), url(/assets/images/detail_background-right_dogwood-retro.svg);
+    background-position: 0% 0%, 100% 0%;
+    background-repeat: repeat-y, repeat-y;
+    background-size: 716px 1926px, 700px 1926px;
+}

@@ -6,7 +6,7 @@
     <title>Naomi's Portfolio{% if title %}| {{title}}{% endif %}</title>
     <link rel="stylesheet" href="/styles-bundle.css">
 </head>
-<body>
+<body class="{% block bodyclass %}{% endblock %}">
     {# Markup for individual page templates #}
     {% block template %}
         {# Default markup can go in here if necessary #}
