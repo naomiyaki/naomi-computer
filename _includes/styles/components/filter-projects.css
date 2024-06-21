@@ -70,12 +70,17 @@
 /* Filter sheet */
 /* Just an ol' table */
 .filter-projects .filter-header {
+    position: relative;
     width: 100%;
     /* border: 3px solid #eaeaea; */
     border-spacing: 0;
     border-image: var(--border-image);
     border-width: 4px;
     border-style: solid;
+    border-radius: 4px;
+    background-color: var(--neutral-0-glass);
+    backdrop-filter: var(--glass-blur);
+    z-index: 2;
 }
 
 .filter-projects .filter-header .header-space td {
@@ -142,12 +147,17 @@
 }
 
 .filter-projects .filter-container {
+    position: relative;
     border-image: var(--border-image);
     border-width: 4px;
     border-style: solid;
     border-top: 0;
+    border-radius: 4px;
     margin-top: -4px;
     padding: 2.25em 1.875em;
+    background-color: var(--neutral-0-glass);
+    backdrop-filter: var(--glass-blur);
+    z-index: 0;
 }
 
 /* Project Listings */

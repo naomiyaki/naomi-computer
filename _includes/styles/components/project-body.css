@@ -2,6 +2,7 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+    margin-bottom: 4.5em;
 }
 
 .project-body main p {
@@ -10,4 +11,10 @@
     /* Top margin is declared in default-copy css */
     margin-right: auto;
     margin-left: auto;
+}
+
+.project-footer.connected-filters {
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
 }

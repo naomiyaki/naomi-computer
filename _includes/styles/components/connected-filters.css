@@ -1,0 +1,35 @@
+.connected-filters {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.25rem;
+    border-image: url('/assets/images/custom-border02.png') 9;
+    border-width: 4px;
+    border-style: solid;
+    background-color: #fff;
+}
+
+.connected-filters .prompt {
+    border-image: url('/assets/images/custom-border02.png') 9;
+    border-right: 4px solid;
+    padding: 0.9em 0.75em;
+}
+
+.connected-filters ul {
+    display: flex;
+    padding: 0 1em;
+}
+
+.connected-filters li + li {
+    margin-left: 3em;
+}
+
+.connected-filters li a {
+    text-decoration: none;
+    color: var(--neutral-7);
+    transition: color 0.2s ease;
+}
+
+.connected-filters li a:hover {
+    color: var(--accent-0);
+}

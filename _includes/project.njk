@@ -46,16 +46,17 @@
             {{ content | safe }}
         </main>
     </div>
-    <div class="project-footer">
-        <a href="/">Return home!</a>
+    
+    <div class="project-footer connected-filters">
+        <div class="prompt">Find some more projects!</div>
+        {% if filters %}
+            <ul class="unstyled-list">
+                {% for filter in filters %}
+                    <li>
+                        <a href="/?filter={{filter | slugify}}">{{filter}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
-
-    {# Output all filters on the project #}
-    {% if filters %}<ul>{% endif %}
-    {% for filter in filters %}
-        <li>
-            <a href="/projects/filters/{{filter | slugify}}">{{filter}}</a>
-        </li>
-    {% endfor %}
-    {% if filters %}</ul>{% endif %}
 {% endblock %}

@@ -4,10 +4,15 @@
     --neutral-7: #3a3a3a;
     --accent-0: #ffaaaa;
 
+    --neutral-0-glass: rgb(252, 248, 244, 0.7);
+
     /* Typography */
     --font-size-base: 16px;
     --font-copy: 'Philosopher', sans-serif;
     --font-header: 'Croissant One', serif;
+
+    /* Filters */
+    --glass-blur: blur(3px);
 
     /* Structure */
     --max-width: 1390px;
