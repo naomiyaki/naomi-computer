@@ -3,7 +3,7 @@ name: Becoming Who We Are
 title: Becoming Who We Are Comic Anthology
 thumb: thumbnail-cover.jpg
 filters:
-  - Comics
+  - comics
 ---
 
 In 2022 my friend Hazel Newlevant asked me about putting together a story for a possible comic anthology: It's like a kids book with cool, real-life role models that are all trans!
