@@ -1,0 +1,6 @@
+/* Global Z-Stack */
+/* For setting z-index on any competing page-level elements */
+
+.floating-back {
+    z-index: 50;
+}

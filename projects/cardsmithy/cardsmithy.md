@@ -4,7 +4,6 @@ title: Cardsmithy Video Game
 thumb: thumbnail-rylan.jpg
 filters:
   - games
-  - illustration
 ---
 
 Cardsmithy is a rogue-like deckbuilding game about forging weapons to fight back the scourge(s) that have appeared on the shores of Rylan. Until you find out why these creatures and curses are here in the first place. I worked on the project as the art-director, asset artist, UI designer, and sometimes writer until the studio closed in Summer of 2023.
