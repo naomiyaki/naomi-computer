@@ -6,7 +6,10 @@
     margin-top: 2.5em;
 }
 
-/* Default image, outside a paragraph, with no classes applied */
-.default-copy img {
-    
+/* Default image output by the image processor */
+.default-copy .content-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: .75em;
 }
