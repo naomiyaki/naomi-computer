@@ -22,8 +22,9 @@
     pointer-events: none;
 }
 
-.project-info .info-list {
+.project-info ul.info-list {
     display: block;
+    width: auto;
     position: relative;
     /* List tucks under the screen-top graphic */
     margin-top: -68px;

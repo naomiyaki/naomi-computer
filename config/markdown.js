@@ -1,6 +1,11 @@
 // Generate responsive images
 // Based on https://tomichen.com/blog/posts/20220416-responsive-images-in-markdown-with-eleventy-image/
-const markdown = require('markdown-it')();
+const markdownOptions = {
+  html: true, // Allows HTML
+  breaks: true // Converts \n to linebreaks
+};
+
+const markdown = require('markdown-it')(markdownOptions);
 const Image = require('@11ty/eleventy-img');
 
 markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
@@ -18,11 +23,10 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     decoding: 'async'
   };
 
-  const widths1x = [225, 350, 690, 990, 1390];
-  // Add Widths for 2x screens and remove any duplicates
-  const imageWidths = widths1x
-    .concat(widths1x.map((w) => w * 2))
-    .filter((v, i, s) => s.indexOf(v) === i);
+  // Add default image widths
+  const imageWidths = [690, 1380, 2070];
+
+  console.log('Widths!', imageWidths);
 
   const imgOpts = {
     widths: imageWidths,
@@ -34,7 +38,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   Image(imgSrc, imgOpts);
   const metadata = Image.statsSync(imgSrc, imgOpts);
   const generated = Image.generateHTML(metadata, {
-    sizes: '225px',
+    sizes: '690w, 1380w',
     ...htmlOpts
   });
 
