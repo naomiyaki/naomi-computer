@@ -9,6 +9,10 @@ const markdown = require('markdown-it')(markdownOptions);
 const Image = require('@11ty/eleventy-img');
 
 markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
+  function figure(html, caption) {
+    return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
+  }
+
   const token = tokens[idx];
   // Image src is from the markdown project directory
   let imgSrc = '.' + env.page.url + token.attrGet('src');
@@ -25,8 +29,6 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 
   // Add default image widths
   const imageWidths = [690, 1380, 2070];
-
-  console.log('Widths!', imageWidths);
 
   const imgOpts = {
     widths: imageWidths,
