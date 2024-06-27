@@ -9,6 +9,10 @@
 // Example:
 // "@skip[100px,200px] Title which also becomes a figure caption"
 
+// Setup defaults up top for easy customization
+const defaultWidths = [690, 1380, 2070];
+const defaultBreaks = '690w, 1380w';
+
 const markdownOptions = {
   html: true, // Allows HTML
   breaks: true // Converts \n to linebreaks
@@ -31,17 +35,50 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const imgAlt = token.content;
   const imgTitle = token.attrGet('title');
 
-  // Parse title text for any custom handling
-  // Skip generating if using custom title code, or if the image is external
-  const titleRegex = /^(?:@class\[(?<class>.*)\])/;
-  const match = (imgTitle || '').match(titleRegex);
-  const customAttrs = match ? match.groups : {};
+  // Parse title text for any custom handling,
+  // Using multiple regexes so custom attributes can be in any order
+  const classRegex = /(?:@class\[([a-z0-9-\s]*)\])/;
+  const classMatch = (imgTitle || '').match(classRegex);
+  const customClasses =
+    classMatch && classMatch.length >= 2 ? classMatch[1] : null;
+
+  // Create an array out of a list of
+  // custom widths
+  const widthRegex = /(?:@widths\[([0-9,\s]*)\])/;
+  const widthMatch = (imgTitle || '').match(widthRegex);
+  const customWidths =
+    widthMatch && widthMatch.length >= 2
+      ? widthMatch[1].split(',').map((s) => {
+          return parseInt(s);
+        })
+      : null;
+
+  // Allow for custom size breakpoints too!
+  const breakRegex = /(?:@breaks\[([a-z0-9,\s]*)\])/;
+  const breakMatch = (imgTitle || '').match(breakRegex);
+  const customBreaks =
+    breakMatch && breakMatch.length >= 2 ? breakMatch[1] : null;
+
+  console.log('CUSTOM BREAKS!!!', customBreaks);
+
+  // Create auto breakpoints based on passed in sizes
+  // If only widths were customized
+  let autoBreaks = null;
+
+  if (customWidths && !customBreaks) {
+    autoBreaks = customWidths.map((d) => {
+      return d + 'w';
+    });
+
+    // Remove the last breakpoint, since it'll be the default max
+    autoBreaks.pop();
+  }
 
   // Setup HTML options including any custom attributes
   const htmlOpts = {
     title: imgTitle,
     alt: imgAlt,
-    class: `content-image${customAttrs.class ? ' ' + customAttrs.class : ''}`,
+    class: `content-image${customClasses ? ' ' + customClasses : ''}`,
     loading: 'lazy',
     decoding: 'async'
   };
@@ -67,8 +104,15 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   }
 
   // Add default image widths
-  const imageWidths = [690, 1380, 2070];
-  const imageSizes = '690w, 1380w';
+  const imageWidths = customWidths ? customWidths : defaultWidths;
+  let imageBreaks = defaultBreaks;
+  // Override default breaks if custom ones are assigned
+  if (autoBreaks) {
+    imageBreaks = autoBreaks;
+  }
+  if (customBreaks) {
+    imageBreaks = customBreaks;
+  }
 
   const imgOpts = {
     widths: imageWidths,
@@ -82,7 +126,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     Image(imgPath, imgOpts);
     const metadata = Image.statsSync(imgPath, imgOpts);
     const generated = Image.generateHTML(metadata, {
-      sizes: imageSizes,
+      sizes: imageBreaks,
       ...htmlOpts
     });
 
