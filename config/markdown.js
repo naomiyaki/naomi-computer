@@ -31,20 +31,20 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const imgAlt = token.content;
   const imgTitle = token.attrGet('title');
 
+  // Parse title text for any custom handling
+  // Skip generating if using custom title code, or if the image is external
+  const titleRegex = /^(?:@class\[(?<class>.*)\])/;
+  const match = (imgTitle || '').match(titleRegex);
+  const customAttrs = match ? match.groups : {};
+
+  // Setup HTML options including any custom attributes
   const htmlOpts = {
     title: imgTitle,
     alt: imgAlt,
-    class: 'content-image',
+    class: `content-image${customAttrs.class ? ' ' + customAttrs.class : ''}`,
     loading: 'lazy',
     decoding: 'async'
   };
-
-  // Parse title text for any custom handling
-  // Skip generating if using custom title code, or if the image is external
-  const titleRegex =
-    /^(?<skip>@skip(?:\[(?<width>\d+[a-z]*),\s*(?<height>\d+[a-z]*)]))\s*(?<titlecap>.*)/;
-  const match = (imgTitle || '').match(titleRegex);
-  const parsed = match ? match.groups : {};
 
   // If an image is from an external source, skip responsive image generation
   if (imgSrc.startsWith('http')) {
@@ -56,7 +56,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     // Adjust HTML options for external image
     const adjHtmlOpts = { ...htmlOpts };
     // Apply custom class based on image type
-    adjHtmlOpts.class = 'content-image external-image';
+    adjHtmlOpts.class = `${adjHtmlOpts.class} external-image`;
 
     // Generate metadata based on filetype
     const metadata = {};
