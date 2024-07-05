@@ -11,7 +11,7 @@
 
 // Setup defaults up top for easy customization
 const defaultWidths = [690, 1380, 2070];
-const defaultBreaks = '690w, 1380w';
+const defaultSizes = '100%';
 
 const markdownOptions = {
   html: true, // Allows HTML
@@ -54,25 +54,12 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
       : null;
 
   // Allow for custom size breakpoints too!
-  const breakRegex = /(?:@breaks\[([a-z0-9,\s]*)\])/;
-  const breakMatch = (imgTitle || '').match(breakRegex);
-  const customBreaks =
-    breakMatch && breakMatch.length >= 2 ? breakMatch[1] : null;
+  const sizesRegex = /(?:@sizes\[([a-z0-9,\s]*)\])/;
+  const sizesMatch = (imgTitle || '').match(sizesRegex);
+  const customSizes =
+    sizesMatch && sizesMatch.length >= 2 ? sizesMatch[1] : null;
 
-  console.log('CUSTOM BREAKS!!!', customBreaks);
-
-  // Create auto breakpoints based on passed in sizes
-  // If only widths were customized
-  let autoBreaks = null;
-
-  if (customWidths && !customBreaks) {
-    autoBreaks = customWidths.map((d) => {
-      return d + 'w';
-    });
-
-    // Remove the last breakpoint, since it'll be the default max
-    autoBreaks.pop();
-  }
+  console.log('CUSTOM BREAKS!!!', customSizes);
 
   // Setup HTML options including any custom attributes
   const htmlOpts = {
@@ -105,14 +92,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 
   // Add default image widths
   const imageWidths = customWidths ? customWidths : defaultWidths;
-  let imageBreaks = defaultBreaks;
-  // Override default breaks if custom ones are assigned
-  if (autoBreaks) {
-    imageBreaks = autoBreaks;
-  }
-  if (customBreaks) {
-    imageBreaks = customBreaks;
-  }
+  let imageSizes = customSizes ? customSizes : defaultSizes;
 
   const imgOpts = {
     widths: imageWidths,
@@ -126,7 +106,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     Image(imgPath, imgOpts);
     const metadata = Image.statsSync(imgPath, imgOpts);
     const generated = Image.generateHTML(metadata, {
-      sizes: imageBreaks,
+      sizes: imageSizes,
       ...htmlOpts
     });
 
