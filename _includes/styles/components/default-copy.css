@@ -6,7 +6,21 @@
     margin-top: 2.5em;
 }
 
-/* Default image, outside a paragraph, with no classes applied */
-.default-copy img {
-    
+.default-copy ul {
+    padding-left: 5em;
+}
+
+/* Default image output by the image processor */
+.default-copy .content-image {
+    display: block;
+    width: 100%;
+    max-width: 690px;
+    height: auto;
+    border-radius: .7em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.default-copy .content-image.small {
+    max-width: 250px;
 }
