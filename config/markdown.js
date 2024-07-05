@@ -59,7 +59,20 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const customSizes =
     sizesMatch && sizesMatch.length >= 2 ? sizesMatch[1] : null;
 
-  console.log('CUSTOM BREAKS!!!', customSizes);
+  // Create a version of the title string without any width/class/size matches
+  // and store it as a caption text
+  const titleUncoded = imgTitle
+    ? imgTitle
+        .replace(classRegex, '')
+        .replace(widthRegex, '')
+        .replace(sizesRegex, '')
+    : null;
+
+  // Assign this to the caption text, or make it null if there's only spaces left
+  const captionText =
+    titleUncoded && titleUncoded.replace(/\s/g, '').length > 0
+      ? titleUncoded
+      : null;
 
   // Setup HTML options including any custom attributes
   const htmlOpts = {
@@ -110,8 +123,8 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
       ...htmlOpts
     });
 
-    if (imgTitle) {
-      return figure(generated, imgTitle);
+    if (captionText) {
+      return figure(generated, captionText);
     }
 
     return generated;

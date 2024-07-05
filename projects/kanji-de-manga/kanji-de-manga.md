@@ -40,7 +40,7 @@ Kanji de Manga does exactly this: teach a new character on each page with a purp
 
 ![This is an image with custom widths](image-test_full-width@2x.jpg '@class[full-width] @widths[500, 750, 960, 1800]')
 
-![This is an image with custom widths and breakpoints](image-test_full-width@2x.jpg '@class[full-width] @widths[500, 750, 960, 1800] @sizes[500px]')
+![This is an image with custom widths and breakpoints](image-test_full-width@2x.jpg '@class[full-width] @widths[500, 750, 960, 1800] @sizes[500px] Also theres a caption here!')
 
 My first work on the Kanji de Manga series, as an intern, was on volume 4 as a translation checker. When I came back to work at Japanime in 2007, I became the layout/graphics person and translator on the series. For volumes 1-4, the books were made in Adobe Illustrator, with separate vector files for every single page. One of my first jobs was to port the layout from Adobe Illustrator to Adobe's book layout program InDesign, which made editing and updating the book drastically easier. The new layout also helped us export the book for Kindle and other e-readers, which were just starting to come out at the time.
 
