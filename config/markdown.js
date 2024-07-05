@@ -10,7 +10,7 @@
 // "@skip[100px,200px] Title which also becomes a figure caption"
 
 // Setup defaults up top for easy customization
-const defaultWidths = [690, 1380, 2070];
+const defaultWidths = ['690, 1380, 2070'];
 const defaultSizes = '100%';
 
 const markdownOptions = {
@@ -54,7 +54,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
       : null;
 
   // Allow for custom size breakpoints too!
-  const sizesRegex = /(?:@sizes\[([a-z0-9,\s]*)\])/;
+  const sizesRegex = /(?:@sizes\[([a-z0-9,-:\(\)\s]*)\])/;
   const sizesMatch = (imgTitle || '').match(sizesRegex);
   const customSizes =
     sizesMatch && sizesMatch.length >= 2 ? sizesMatch[1] : null;
@@ -76,7 +76,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 
   // Setup HTML options including any custom attributes
   const htmlOpts = {
-    title: imgTitle,
+    title: captionText,
     alt: imgAlt,
     class: `content-image${customClasses ? ' ' + customClasses : ''}`,
     loading: 'lazy',
