@@ -3,7 +3,7 @@
 }
 
 .default-copy p + p {
-    margin-top: 2.5em;
+    margin-top: 2.25em;
 }
 
 .default-copy ul {
@@ -14,7 +14,7 @@
 .default-copy .content-image {
     display: block;
     width: 100%;
-    max-width: 690px;
+    max-width: var(--content-medium);
     height: auto;
     border-radius: .7em;
     margin-right: auto;
@@ -27,4 +27,14 @@
 
 .default-copy .content-image.full-size {
     max-width: var(--max-width);
+}
+
+/* Figures with captions built by the Markdown parser */
+.default-copy .content-image-with-caption figcaption {
+    display: block;
+    text-align: center;
+    max-width: calc(var(--content-medium) - 2em);
+    margin: .8em auto;
+    font-size: 1.15em;
+    font-weight: var(--font-bold);
 }

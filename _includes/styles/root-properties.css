@@ -10,6 +10,7 @@
 
     /* Typography */
     --font-size-base: 16px;
+    --font-bold: 700;
     --font-copy: 'Philosopher', sans-serif;
     --font-header: 'Croissant One', serif;
 
@@ -19,6 +20,7 @@
     /* Structure */
     --max-width: 1390px;
     --content-width: 990px;
+    --content-medium: 720px;
 
     /* Media Queries */
     /* 

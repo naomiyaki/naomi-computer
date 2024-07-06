@@ -10,7 +10,7 @@
 // "@skip[100px,200px] Title which also becomes a figure caption"
 
 // Setup defaults up top for easy customization
-const defaultWidths = [690, 1380, 2070];
+const defaultWidths = [720, 1380, 2070];
 const defaultSizes = '100%';
 
 const markdownOptions = {
@@ -24,7 +24,7 @@ const Image = require('@11ty/eleventy-img');
 markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   // Custom HTML for images with a title tag to be used as a caption
   function figure(html, caption) {
-    return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
+    return `<figure class="content-image-with-caption">${html}<figcaption>${caption}</figcaption></figure>`;
   }
 
   const token = tokens[idx];
