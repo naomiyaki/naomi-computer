@@ -103,9 +103,6 @@ const showAllProjects = function (e) {
   projectsList.innerHTML = createProjectListMarkup(projects);
 };
 
-// Run the function when the script starts;
-showAllProjects();
-
 // Set up the filters so that clicking them resets the HTML
 const filterList = document.getElementById('filter-list');
 const filters = [...filterList.getElementsByTagName('BUTTON')];
@@ -124,7 +121,6 @@ filters.forEach((element) => {
 // for further styling in CSS
 const addHoverClass = function (e) {
   projectsList.classList.add('item-hovered');
-  cancelDebounce = true;
 };
 
 const removeHoverClass = async function (e) {
@@ -132,3 +128,31 @@ const removeHoverClass = async function (e) {
   // of the delayed transition
   projectsList.classList.remove('item-hovered');
 };
+
+// Check the query string to see if a filter is already applied
+// by the URL
+const urlParams = new URLSearchParams(window.location.search);
+const filterParam = urlParams.get('projectFilter');
+
+// If there's a filter in the query string, make sure it's
+// a real one
+const isQueryValid =
+  filterParam &&
+  filters.some((element) => {
+    // Use a case insensitive comparison between query string
+    // and filters
+    return element.dataset.filter.toLowerCase() === filterParam.toLowerCase();
+  });
+
+console.log('Is query valid??', isQueryValid);
+
+// If there's a valid query string, pre-set the filter
+if (isQueryValid) {
+  projectsList.innerHTML = createProjectListMarkup(
+    projects,
+    filterParam.toLowerCase()
+  );
+} else {
+  // Otherwise, show all projects when the script starts;
+  showAllProjects();
+}

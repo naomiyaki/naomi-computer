@@ -3,7 +3,7 @@ name: No Gloop No Glory
 title: No Gloop No Glory Video Game
 thumb: thumbnail-glory.jpg
 filters:
-  - 3D
+  - 3d
   - games
 ---
 
