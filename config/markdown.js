@@ -10,7 +10,7 @@
 // "@skip[100px,200px] Title which also becomes a figure caption"
 
 // Setup defaults up top for easy customization
-const defaultWidths = ['690, 1380, 2070'];
+const defaultWidths = [690, 1380, 2070];
 const defaultSizes = '100%';
 
 const markdownOptions = {
@@ -106,6 +106,13 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   // Add default image widths
   const imageWidths = customWidths ? customWidths : defaultWidths;
   let imageSizes = customSizes ? customSizes : defaultSizes;
+
+  console.log(`
+    Generating image: ${imgSrc}\n
+    --------------------
+    Image Widths: ${imageWidths}\n
+    Sizes: ${imageSizes}
+  `);
 
   const imgOpts = {
     widths: imageWidths,
