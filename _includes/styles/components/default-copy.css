@@ -24,3 +24,7 @@
 .default-copy .content-image.small {
     max-width: 250px;
 }
+
+.default-copy .content-image.full-size {
+    max-width: var(--max-width);
+}
