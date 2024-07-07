@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
 /* Default Overrides */
 figure {
     /* Override default margins */

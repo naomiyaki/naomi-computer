@@ -2,12 +2,33 @@
     font-size: 1rem;
 }
 
+.default-copy p {
+    width: 100%;
+    max-width: var(--content-width);
+    /* Top margin is declared below */
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .default-copy p + p {
     margin-top: 2.25em;
 }
 
 .default-copy ul {
     padding-left: 5em;
+}
+
+.default-copy blockquote {
+    font-size: 2em;
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.default-copy blockquote p {
+    max-width: 100%;
+    padding-left: 2em;
+    padding-right: 7em;
 }
 
 /* Default image output by the image processor */
