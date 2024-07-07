@@ -2,6 +2,12 @@
     font-size: 1rem;
 }
 
+.default-copy h3 {
+    font-size: 1.5em;
+    max-width: var(--content-width);
+    margin: 0.2em auto 1em auto;
+}
+
 .default-copy p {
     width: 100%;
     max-width: var(--content-width);
@@ -12,6 +18,18 @@
 
 .default-copy p + p {
     margin-top: 2.25em;
+}
+
+.default-copy p a {
+    color: var(--accent-0);
+    text-decoration: none;
+    border-radius: 0.2em;
+    transition: all ease 0.15s;
+}
+
+.default-copy p a:hover {
+    background-color: var(--accent-0);
+    color: var(--neutral-0);
 }
 
 .default-copy ul {

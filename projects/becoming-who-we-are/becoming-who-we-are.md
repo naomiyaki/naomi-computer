@@ -50,6 +50,8 @@ Being part of this project felt healing. Thank you Hazel and Ana.
 
 ![Comic art portrait of forest ranger Robbi Mecus in mountain/outdoor wear, with her hair long and a teal winter jacket and gloves. She's standing in front of a cold mountain range with a metal drink bottle. Warm steam is billowing up from the drink bottle](portrait-robbi.jpg)
 
+<br/><br/>
+
 ### Update, content warning for loss and grief:
 
 Shortly after I drafted this page, Robbi Mecus died at the end of April, 2024. I didn't get to meet Robbi while working on the comic. I felt connected to her through interviews, pouring over photos and connecting to her growth through my own experience, and had dreamed of getting to meet her in the Adirondacks for a hike one day. To be able to tell her how her story made me feel, and got me to try rock climbing.
