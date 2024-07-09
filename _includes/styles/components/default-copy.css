@@ -82,15 +82,73 @@
     position: relative;
 }
 
-.default-copy .spoiler p {
+.default-copy .spoiler.hidden p {
     visibility: hidden;
 }
 
-.default-copy .spoiler:before {
+.default-copy .spoiler.hidden:before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--neutral-7);
     border-radius: var(--corner-base);
+}
+
+.default-copy .spoiler .spoiler-control {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.default-copy .spoiler .spoiler-control > div {
+    margin: auto;
+}
+
+.default-copy .spoiler .spoiler-control button {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: var(--font-bold);
+    padding: 0.6em 3em 0.7em;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: var(--neutral-0);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.default-copy .spoiler .spoiler-control button:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(/assets/images/body_spoiler-button.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.32;
+    z-index: -1;
+    transition: opacity 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.default-copy .spoiler .spoiler-control button:hover:before {
+    opacity: 0.64;
+}
+
+
+.default-copy .spoiler .spoiler-control button span {
+    display: block;
+    font-size: 0.65em;
+    font-weight: normal;
+    padding: 0.4em;
+}
+
+.default-copy .spoiler .spoiler-control .note {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 1em;
+    color: var(--neutral-0);
 }

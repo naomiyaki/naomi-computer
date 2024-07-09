@@ -16,8 +16,8 @@ module.exports = {
         return (
           '<div class="spoiler hidden">' +
           '<div class="spoiler-control">' +
-          '<button>Spoiler/Hidden <span>Click To Show<span></button>' +
-          '<div class="note">Reload page to re-hide</div>' +
+          '<div><button><span>Spoiler/Hidden</span>Click To Show</button>' +
+          '<div class="note">Reload page to re-hide</div></div>' +
           '</div>'
         );
       } else {
