@@ -107,12 +107,13 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const imageWidths = customWidths ? customWidths : defaultWidths;
   let imageSizes = customSizes ? customSizes : defaultSizes;
 
-  console.log(`
-    Generating image: ${imgSrc}\n
-    --------------------
-    Image Widths: ${imageWidths}\n
-    Sizes: ${imageSizes}
-  `);
+  // Optionally check image sizes
+  // console.log(`
+  //   Generating image: ${imgSrc}\r
+  //   --------------------
+  //   Image Widths: ${imageWidths}\r
+  //   Sizes: ${imageSizes}
+  // `);
 
   const imgOpts = {
     widths: imageWidths,

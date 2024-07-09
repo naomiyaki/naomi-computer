@@ -1,4 +1,6 @@
 // Custom collection API functions
+const mdSpoiler = require('@traptitech/markdown-it-spoiler');
+
 const getFilters = require('./config/getFilters.js');
 const getProjectListings = require('./config/getProjectListings.js');
 
@@ -21,12 +23,19 @@ module.exports = function (eleventyConfig) {
   // touching the usual config defaults
   eleventyConfig.addTemplateFormats(['jpg', 'png']);
 
+  // Markdown Config
+  // --------------------
   // Modify markdown image processing to use eleventy-img
   // generate responsive images
   eleventyConfig.setLibrary('md', markdown);
 
   // Use mila plugin to parse external links to open in a new window/tab
   eleventyConfig.amendLibrary('md', (mdLib) => mdLib.use(mila, milaOptions));
+
+  // Use spoiler plugin so inline `!! spoiler !!` syntax generates a custom span tag
+  eleventyConfig.amendLibrary('md', (mdLib) =>
+    mdLib.use(mdSpoiler, { frontPriorMode: true })
+  );
 
   // Passthrough assets for non-bundled like images and fonts
   eleventyConfig.addPassthroughCopy('assets');
