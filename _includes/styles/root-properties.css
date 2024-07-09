@@ -22,6 +22,9 @@
     --content-width: 990px;
     --content-medium: 720px;
 
+    /* Appearance */
+    --corner-base: 0.7em;
+
     /* Media Queries */
     /* 
         These can't be used as query parameters,

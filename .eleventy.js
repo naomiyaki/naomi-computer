@@ -3,6 +3,7 @@ const mdContainer = require('markdown-it-container');
 
 const getFilters = require('./config/getFilters.js');
 const getProjectListings = require('./config/getProjectListings.js');
+const { spoilerMatch, renderSpoiler } = require('./config/spoiler.js');
 
 // Nunjucks Extensions
 const minifyJS = require('./config/minifyJS.js');
@@ -35,7 +36,9 @@ module.exports = function (eleventyConfig) {
 
   // Use custom blocks with ::: syntax
   eleventyConfig.amendLibrary('md', (mdLib) =>
-    mdLib.use(MarkdownItContainer, 'spoiler')
+    mdLib.use(MarkdownItContainer, spoilerMatch, {
+      render: renderSpoiler(mdLib)
+    })
   );
 
   // Passthrough assets for non-bundled like images and fonts

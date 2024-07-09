@@ -8,7 +8,7 @@
     margin: 0.2em auto 1em auto;
 }
 
-.default-copy p {
+.default-copy p, .default-copy .spoiler {
     width: 100%;
     max-width: var(--content-width);
     /* Top margin is declared below */
@@ -55,7 +55,7 @@
     width: 100%;
     max-width: var(--content-medium);
     height: auto;
-    border-radius: .7em;
+    border-radius: var(--corner-base);
     margin-right: auto;
     margin-left: auto;
 }
@@ -76,4 +76,21 @@
     margin: .8em auto;
     font-size: 1.15em;
     font-weight: var(--font-bold);
+}
+
+.default-copy .spoiler {
+    position: relative;
+}
+
+.default-copy .spoiler p {
+    visibility: hidden;
+}
+
+.default-copy .spoiler:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--neutral-7);
+    border-radius: var(--corner-base);
 }
