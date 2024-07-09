@@ -13,6 +13,7 @@
     font-family: var(--font-header);
     font-size: 1.938em;
     line-height: 1.4em;
+    margin: 0.67em 0 0.45em;
 }
 
 .project-header .project-tagline {

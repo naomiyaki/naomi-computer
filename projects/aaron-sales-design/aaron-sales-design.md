@@ -1,9 +1,9 @@
 ---
-name: Aaron Sales Design
+name: Aaron Sales j Design
 title: Aaron Sales UX/UI Design Case Studies
 tagline: Interviews and UX/UI Case Studies
 thumb: thumbnail-beard.jpg
-hero: hero-placeholder.jpg
+hero: hero.jpg
 logo: logo-text.jpg
 filters:
   - web dev
