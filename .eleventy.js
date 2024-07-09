@@ -1,5 +1,5 @@
 // Custom collection API functions
-const mdSpoiler = require('@traptitech/markdown-it-spoiler');
+const mdContainer = require('markdown-it-container');
 
 const getFilters = require('./config/getFilters.js');
 const getProjectListings = require('./config/getProjectListings.js');
@@ -11,6 +11,7 @@ const minifyJS = require('./config/minifyJS.js');
 const markdown = require('./config/markdown.js');
 
 const { mila, milaOptions } = require('./config/mila.js');
+const MarkdownItContainer = require('markdown-it-container');
 
 // Add a custom collection with a list of filters that are used on projects, and the permalinks for the posts they contain
 module.exports = function (eleventyConfig) {
@@ -32,9 +33,9 @@ module.exports = function (eleventyConfig) {
   // Use mila plugin to parse external links to open in a new window/tab
   eleventyConfig.amendLibrary('md', (mdLib) => mdLib.use(mila, milaOptions));
 
-  // Use spoiler plugin so inline `!! spoiler !!` syntax generates a custom span tag
+  // Use custom blocks with ::: syntax
   eleventyConfig.amendLibrary('md', (mdLib) =>
-    mdLib.use(mdSpoiler, { frontPriorMode: true })
+    mdLib.use(MarkdownItContainer, 'spoiler')
   );
 
   // Passthrough assets for non-bundled like images and fonts

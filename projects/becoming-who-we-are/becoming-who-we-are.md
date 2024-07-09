@@ -54,6 +54,7 @@ Being part of this project felt healing. Thank you Hazel and Ana.
 
 ### Update, content warning for loss and grief:
 
+::: spoiler
 Shortly after I drafted this page, Robbi Mecus died at the end of April, 2024. I didn't get to meet Robbi while working on the comic. I felt connected to her through interviews, pouring over photos and connecting to her growth through my own experience, and had dreamed of getting to meet her in the Adirondacks for a hike one day. To be able to tell her how her story made me feel, and got me to try rock climbing.
 
 I'm so sorry to all of Robbi's family. Her companions, and the queer climbers she mentored and inspired directly to be themselves. One thing that many articles noted after Robbi died was how active she was to smash the boundaries around gender and queerness in climbing, to guide other queer people up into the mountains just as they are.
@@ -63,3 +64,4 @@ From the interview above, [re-published in this article](https://www.npr.org/202
 > There's many reasons why I didn't come out until I was 44. But one of them was because I didn't see anybody else doing the things that I still wanted to do, and I didn't think I could do them. I didn't see any queer rangers. I didn't see any trans climbers.<br/>- Robbi Mecus
 
 Robbi lived as this role model. I hope the book can introduce Robbi to anyone who might be looking for her, and more.
+:::
