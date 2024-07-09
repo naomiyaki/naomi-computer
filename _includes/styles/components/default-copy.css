@@ -86,13 +86,20 @@
     visibility: hidden;
 }
 
-.default-copy .spoiler.hidden:before {
+.default-copy .spoiler:before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--neutral-7);
     border-radius: var(--corner-base);
+    opacity: 1;
+    transition: opacity 0.35s ease;
+}
+
+.default-copy .spoiler.not-hidden:before {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .default-copy .spoiler .spoiler-control {
@@ -100,6 +107,13 @@
     display: flex;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transition: opacity 0.35s ease;
+}
+
+.default-copy .spoiler.not-hidden .spoiler-control {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .default-copy .spoiler .spoiler-control > div {

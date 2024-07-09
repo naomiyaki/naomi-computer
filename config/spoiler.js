@@ -14,7 +14,7 @@ module.exports = {
       if (tokens[idx].nesting === 1) {
         // Return opening tag
         return (
-          '<div class="spoiler hidden">' +
+          '<div data-spoiler class="spoiler hidden">' +
           '<div class="spoiler-control">' +
           '<div><button><span>Spoiler/Hidden</span>Click To Show</button>' +
           '<div class="note">Reload page to re-hide</div></div>' +

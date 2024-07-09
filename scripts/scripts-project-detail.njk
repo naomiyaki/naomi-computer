@@ -1,0 +1,9 @@
+---
+    permalink: scripts-bundle_project-detail.js
+---
+
+{# Capturing the script to minify #}
+{# https://www.11ty.dev/docs/quicktips/inline-js/ #}
+{% set js %}{% include "scripts/handle-spoilers.js" %}{% endset %}
+
+{{js | minJS | safe}}
