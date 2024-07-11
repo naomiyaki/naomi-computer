@@ -60,8 +60,16 @@
     margin-left: auto;
 }
 
+.default-copy .content-image.thumb {
+    max-width: 170px;
+}
+
 .default-copy .content-image.small {
     max-width: 250px;
+}
+
+.default-copy .content-image.medium {
+    max-width: 480px;
 }
 
 .default-copy .content-image.full-size {
