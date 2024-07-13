@@ -3,7 +3,7 @@ const mdContainer = require('markdown-it-container');
 
 const getFilters = require('./config/getFilters.js');
 const getProjectListings = require('./config/getProjectListings.js');
-const { spoilerMatch, renderSpoiler } = require('./config/spoiler.js');
+const blockContainers = require('./config/blockContainers.js');
 
 // Nunjucks Extensions
 const minifyJS = require('./config/minifyJS.js');
@@ -35,11 +35,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.amendLibrary('md', (mdLib) => mdLib.use(mila, milaOptions));
 
   // Use custom blocks with ::: syntax
-  eleventyConfig.amendLibrary('md', (mdLib) =>
-    mdLib.use(MarkdownItContainer, spoilerMatch, {
-      render: renderSpoiler(mdLib)
-    })
-  );
+  // Get an array of objects with a "match" string and render declaration
+  // and apply each of them with the MarkdownItContainer plugin
+  eleventyConfig.amendLibrary('md', (mdLib) => {
+    blockContainers.forEach((block) => {
+      mdLib.use(MarkdownItContainer, block.match, {
+        render: block.render(mdLib)
+      });
+    });
+  });
+
+  // This one is for a basic 1-2 image treatment that is
+  // controlled with styles
 
   // Passthrough assets for non-bundled like images and fonts
   eleventyConfig.addPassthroughCopy('assets');

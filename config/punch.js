@@ -1,7 +1,7 @@
 // Render/Markup function for custom container spoiler configuration
 
 module.exports = {
-  match: 'spoiler',
+  match: 'punch',
   render: function (md) {
     // Not using it currently, but nesting the return
     // allows passing the markdown-it library in-case additional
@@ -9,17 +9,11 @@ module.exports = {
     return function (tokens, idx) {
       // Match containing the spoiler content
       // Note that the match should be the same as above
-      const m = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
+      const m = tokens[idx].info.trim().match(/^punch\s+(.*)$/);
 
       if (tokens[idx].nesting === 1) {
         // Return opening tag
-        return (
-          '<div data-spoiler class="spoiler hidden">' +
-          '<div class="spoiler-control">' +
-          '<div><button><span>Spoiler/Hidden</span>Click To Show</button>' +
-          '<div class="note">Reload page to re-hide</div></div>' +
-          '</div>'
-        );
+        return '<div class="punch">';
       } else {
         // Return ending tab
         return '</div>';

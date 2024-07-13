@@ -1,5 +1,7 @@
 .default-copy {
     font-size: 1rem;
+    --line-margin: 2.25em;
+    --single-margin: 1em;
 }
 
 .default-copy h3 {
@@ -16,8 +18,8 @@
     margin-left: auto;
 }
 
-.default-copy p + p {
-    margin-top: 2.25em;
+.default-copy p + p, .default-copy div + p {
+    margin-top: var(--line-margin);
 }
 
 .default-copy p a {
@@ -84,6 +86,25 @@
     margin: .8em auto;
     font-size: 1.15em;
     font-weight: var(--font-bold);
+}
+
+/* 1-2 Punch Images that display one image on mobile, and two side-by-side images on desktop */
+.default-copy .punch {
+    display: flex;
+    width: 100%;
+    max-width: var(--content-width);
+    margin: var(--line-margin) auto var(--single-margin);
+}
+
+.default-copy .punch p {
+    margin: 0;
+    padding-right: 0.75em;
+}
+
+.default-copy .punch p + p {
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0.75em;
 }
 
 .default-copy .spoiler {

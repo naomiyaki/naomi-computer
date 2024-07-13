@@ -2,7 +2,7 @@
 name: Cardsmithy
 title: Cardsmithy Video Game
 tagline: Roguelike Deckbuilding Game with Exploration/Strategy Elements (Unfinished)
-thumb: thumbnail-rylan.jpg
+thumb: thumb.jpg
 hero: hero.jpg
 info:
   - name: Year
