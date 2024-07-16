@@ -4,6 +4,20 @@
     --single-margin: 1em;
 }
 
+.default-copy h2 {
+    font-size: 1.8em;
+    max-width: var(--content-width);
+    margin: 0.2em auto 1.5em auto;
+}
+
+/* Special subheader treatment for default copy */
+.default-copy h2 em {
+    display: block;
+    font-weight: normal;
+    font-size: 0.58em;
+    padding-top: .45em;
+}
+
 .default-copy h3 {
     font-size: 1.5em;
     max-width: var(--content-width);
