@@ -91,12 +91,13 @@
 /* 1-2 Punch Images that display one image on mobile, and two side-by-side images on desktop */
 .default-copy .punch {
     display: flex;
+    align-items: center;
     width: 100%;
     max-width: var(--content-width);
     margin: var(--line-margin) auto var(--single-margin);
 }
 
-.default-copy .punch p {
+.default-copy .punch > p {
     margin: 0;
     padding-right: 0.75em;
 }
@@ -105,6 +106,7 @@
     margin: 0;
     padding-right: 0;
     padding-left: 0.75em;
+    /* Set width to 56.5% for a tall */
 }
 
 .default-copy .spoiler {
