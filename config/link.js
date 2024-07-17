@@ -1,7 +1,7 @@
-// Render/Markup function for custom 1-2 responsive two image container
+// Render/Markup function for custom link block
 
 module.exports = {
-  match: 'punch',
+  match: 'link',
   options: {
     render: function (md) {
       // Not using it currently, but nesting the return
@@ -10,19 +10,18 @@ module.exports = {
       return function (tokens, idx) {
         // User can pass a custom class in addition to "punch"
         // by using the same escape notation as images "@class[classnames]"
-        const classRegex = /(?:@class\[([a-z0-9-\s]*)\])/;
-        const classMatch = tokens[idx].info.trim().match(classRegex);
-        const customClasses =
-          classMatch && classMatch.length >= 2 ? classMatch[1] : null;
+        const linkRegex =
+          /(?:@link\[([-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?)\])/;
+        const linkMatch = tokens[idx].info.trim().match(linkRegex);
+        const linkURL =
+          linkMatch && linkMatch.length >= 2 ? linkMatch[1] : null;
 
         if (tokens[idx].nesting === 1) {
           // Return opening tag
-          return `<div class="punch${
-            customClasses ? ' ' + customClasses : ''
-          }">`;
+          return `<a class="link-block" href="${linkURL}">`;
         } else {
           // Return ending tab
-          return '</div>';
+          return '</a>';
         }
       };
     }

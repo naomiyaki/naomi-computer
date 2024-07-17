@@ -1,5 +1,6 @@
 .default-copy {
     font-size: 1rem;
+    --image-margin: 3em;
     --line-margin: 2.25em;
     --single-margin: 1em;
 }
@@ -32,9 +33,21 @@
     margin-left: auto;
 }
 
-.default-copy p + p, .default-copy div + p {
+.default-copy .full-size p, .default-copy .full-size .spoiler {
+    width: 100%;
+    max-width: var(--max-width);
+    /* Top margin is declared below */
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+.default-copy p + p, 
+.default-copy div + p, 
+.default-copy a + p,
+.default-copy * + .link-block  {
     margin-top: var(--line-margin);
 }
+
 
 .default-copy p a {
     color: var(--accent-0);
@@ -65,6 +78,20 @@
     padding-right: 7em;
 }
 
+.default-copy .link-block {
+    display: block;
+    text-decoration: none;
+    color: var(--accent-0);
+}
+
+.default-copy .link-block img {
+    transition: box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.default-copy .link-block:hover img {
+    box-shadow: 0px 0px 0em 0.8em var(--accent-0);
+}
+
 /* Default image output by the image processor */
 .default-copy .content-image {
     display: block;
@@ -72,8 +99,15 @@
     max-width: var(--content-medium);
     height: auto;
     border-radius: var(--corner-base);
-    margin-right: auto;
-    margin-left: auto;
+    margin: var(--image-margin) auto;
+}
+
+.default-copy figure .content-image {
+    margin-bottom: 0.8em;
+}
+
+.default-copy .full-size .content-image {
+    max-width: 100%;
 }
 
 .default-copy .content-image.thumb {
@@ -100,6 +134,11 @@
     margin: .8em auto;
     font-size: 1.15em;
     font-weight: var(--font-bold);
+}
+
+/* Add a little more padding on figcaptions inside links */
+.default-copy .link-block .content-image-with-caption figcaption {
+    margin: 1em auto;
 }
 
 /* 1-2 Punch Images that display one image on mobile, and two side-by-side images on desktop */

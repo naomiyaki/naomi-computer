@@ -39,9 +39,14 @@ module.exports = function (eleventyConfig) {
   // and apply each of them with the MarkdownItContainer plugin
   eleventyConfig.amendLibrary('md', (mdLib) => {
     blockContainers.forEach((block) => {
-      mdLib.use(MarkdownItContainer, block.match, {
-        render: block.render(mdLib)
-      });
+      // Get a version of each block's render function (if it has one)
+      // that has access to Markdown-it
+      const options = {};
+      if (block.options && block.options.render) {
+        options.render = block.options.render(mdLib);
+      }
+
+      mdLib.use(MarkdownItContainer, block.match, options);
     });
   });
 

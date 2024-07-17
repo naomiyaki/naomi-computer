@@ -136,7 +136,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
     }
 
     // Return image in blank div so that it escapes being in a paragraph
-    return `<div>${generated}</div>`;
+    return generated;
   } catch (error) {
     // If an image can't be found, the markdown doesn't
     // render anything and the build continues with a warning
