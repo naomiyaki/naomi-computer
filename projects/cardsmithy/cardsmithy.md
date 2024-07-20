@@ -57,6 +57,6 @@ When we hit a gameplay milestone, Logan and I would show it to the team, and the
 
 Sadly Cardsmithy wasn't finished before the studio producing it was closed. While I feel very lucky to have gotten the chance to work on it, truthfully I think it was a bit too big in scope for our first project to be making as a team.
 
-![Icon with a round blue slime, almost gum-drop shaped. The slime has a face and they are looking nervous but resigned at the same time, almost embarassed a little bit, with a big sweat drop to the upper left of their large, glossy eyes.](gloop-icon.png '@class[thumb]')
+![Icon with a round blue slime, almost gum-drop shaped. The slime has a face and they are looking nervous but resigned at the same time, almost embarassed a little bit, with a big sweat drop to the upper left of their large, glossy eyes.](../no-gloop-no-glory/gloop-icon.png '@class[thumb]')
 
 Since the studio closed, Logan and I made [another small game together](/projects/no-gloop-no-glory/), and have continued to collaborate on future game ideas. We may come back to Cardsmithy one day, but in any case I hope we can continue to make strange and thoughtful games together.

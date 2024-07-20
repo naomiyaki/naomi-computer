@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
 
   // Adds jpg and png files inside of collection item directories without
   // touching the usual config defaults
-  eleventyConfig.addTemplateFormats(['jpg', 'png']);
+  eleventyConfig.addTemplateFormats(['jpg', 'png', 'gif', 'mov', 'webm']);
 
   // Markdown Config
   // --------------------

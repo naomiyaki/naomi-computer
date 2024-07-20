@@ -8,7 +8,11 @@
 .default-copy h2 {
     font-size: 1.8em;
     max-width: var(--content-width);
-    margin: 0.2em auto 1.5em auto;
+    margin: 0.5em auto 1.5em auto;
+}
+
+.default-copy p + h2 {
+    margin-top: 1.2em;
 }
 
 /* Special subheader treatment for default copy */
@@ -93,7 +97,7 @@
 }
 
 /* Default image output by the image processor */
-.default-copy .content-image {
+.default-copy .content-image, .default-copy .content-video {
     display: block;
     width: 100%;
     max-width: var(--content-medium);
@@ -118,7 +122,7 @@
     max-width: 250px;
 }
 
-.default-copy .content-image.medium {
+.default-copy .content-image.medium, .default-copy .content-video.medium {
     max-width: 480px;
 }
 
