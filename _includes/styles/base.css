@@ -20,6 +20,22 @@ body {
     background-color: var(--neutral-0);
 }
 
+/* Accessability */
+/* --------------------- */
+/* Hide certain elements to all users
+except screen readers
+From: https://webaim.org/techniques/css/invisiblecontent/ */
+.screen-reader {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: (inset(50%));
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 /* Structure */
 /* --------------------- */
 .container {

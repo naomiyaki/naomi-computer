@@ -110,7 +110,7 @@
     margin-bottom: 0.8em;
 }
 
-.default-copy .full-size .content-image {
+.default-copy .full-size .content-image, .default-copy .full-size .content-video {
     max-width: 100%;
 }
 
@@ -124,10 +124,6 @@
 
 .default-copy .content-image.medium, .default-copy .content-video.medium {
     max-width: 480px;
-}
-
-.default-copy .content-image.full-size {
-    max-width: var(--max-width);
 }
 
 /* Figures with captions built by the Markdown parser */
