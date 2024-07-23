@@ -1,5 +1,5 @@
 // Custom collection API functions
-const mdContainer = require('markdown-it-container');
+const MarkdownItContainer = require('markdown-it-container');
 
 const getFilters = require('./config/getFilters.js');
 const getProjectListings = require('./config/getProjectListings.js');
@@ -12,7 +12,6 @@ const minifyJS = require('./config/minifyJS.js');
 const markdown = require('./config/markdown.js');
 
 const { mila, milaOptions } = require('./config/mila.js');
-const MarkdownItContainer = require('markdown-it-container');
 
 // Add a custom collection with a list of filters that are used on projects, and the permalinks for the posts they contain
 module.exports = function (eleventyConfig) {
