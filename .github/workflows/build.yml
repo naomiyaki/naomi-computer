@@ -3,6 +3,8 @@ name: Build and Deploy
 on: 
   push: 
     branches: ['main']
+  # Allow the action to be run manually
+  workflow_dispatch:
 
 jobs:
   build:
