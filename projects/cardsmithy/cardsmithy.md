@@ -21,7 +21,7 @@ Cardsmithy is a roguelike deckbuilding game about forging weapons to fight back 
 
 ![Drawing of a billhook tool](forest-billhook.png '@class[thumb] @widths[200, 400] @sizes[170px, (min-resolution: 2x) 340px]')
 
-I joined the company in the prototyping stages and worked with the lead developer Logan Stolmaker to design the UI for crafting, which was to be the main loop of gameplay. The visual design process led to questions about the prototype: "What are the main sources of conflict and gameplay friction?" "Can the crafting be modularized?" We collaborated on the game design together for another couple of rounds, pursuing the mechanics and challenges that were the most fun each time.
+I joined the company in the prototyping stages and worked with the lead developer [Logan Stolmaker](https://loganstolmaker.com/) to design the UI for crafting, which was to be the main loop of gameplay. The visual design process led to questions about the prototype: "What are the main sources of conflict and gameplay friction?" "Can the crafting be modularized?" We collaborated on the game design together for another couple of rounds, pursuing the mechanics and challenges that were the most fun each time.
 
 ![Flat prototype of the crafting screen within the game. Image shows a sword resting on an anvil with glowing sigils hovering over it. Three metaphorical rows point down towards the sword like in a rhythm game. Different icons of a flame, a broken sword, and a pair of goggles rest on each row.](flat-prototype.jpg 'An early hand-drawn "flat" prototype of the crafting screen, before integrating any 3D elements')
 
