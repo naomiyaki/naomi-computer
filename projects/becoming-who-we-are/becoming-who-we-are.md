@@ -37,7 +37,7 @@ The initial scene is a bike-chase through the streets of Greenpoint Brooklyn in 
 
 ![](comic_p02.jpg)
 
-I had never drawn rock-climbing before, and didn't even know what the equipment looked like. I went and did tried it at a local gym, and I've continued to go every so often 💕 Rock climbing has changed a lot since the 80's - I made sure to research what kind of equipment, clothing, and rock-climbing shoes would have been used when Robbi was just starting to try climbing.
+I had never drawn rock-climbing before, and didn't even know what the equipment looked like. I went and tried it at a local gym, and I've continued to go every so often 💕 Rock climbing has changed a lot since the 80's - I made sure to research what kind of equipment, clothing, and rock-climbing shoes would have been used when Robbi was just starting to try climbing.
 
 ![](character-sheet_climbers.jpg)
 ![](character-sheet_robbi-ages.jpg 'Some of the character designs I did for Robbi and other climbers before starting the story.')

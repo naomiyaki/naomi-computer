@@ -7,7 +7,7 @@ hero: hero.jpg
 info:
   - name: Year
     type: text
-    value: 2024
+    value: 2023
   - name: Roles
     type: longtext
     value: Art Director, UI Design, Game Assets, Writing

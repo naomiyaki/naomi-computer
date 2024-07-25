@@ -16,9 +16,13 @@ module.exports = {
         const linkURL =
           linkMatch && linkMatch.length >= 2 ? linkMatch[1] : null;
 
+        const external = linkURL && linkURL.includes('http');
+
         if (tokens[idx].nesting === 1) {
           // Return opening tag
-          return `<a class="link-block" href="${linkURL}">`;
+          return `<a class="link-block" ${
+            external ? 'target=_blank' : ''
+          } href="${linkURL}">`;
         } else {
           // Return ending tab
           return '</a>';
