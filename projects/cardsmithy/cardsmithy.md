@@ -31,7 +31,7 @@ Along the way, I started writing the lore of the game, so I could create a setti
 
 _On your midday break some of your parent's old chums come by with a bundle of mountain-moss wood and the usual talk about "don't let the forge languish with just nails and cutlery." Your parent, and all of Rylan, have a history of trading in some epic weaponry, but things are finally calm now. Sure, the mad-prince is off with most of the military and tradesfolk (not to mention your parent and older sibling) but imperial colony or not, Rylan is at its best when it's self governing. And the mad-prince didn't leave any replacement so... things have kinda' just gotten steady. Maybe even cozy._
 
-Building the game's world was like creating a small atlas of places that didn't (yet) exist. We came up with a fantasy world and filled it with questions, many of which were answered by chracters and tools that could become quests for our player.
+Building the game's world was like creating a small atlas of places that didn't (yet) exist. We came up with a fantasy world and filled it with questions, many of which were answered by characters and tools that could become quests for our player.
 
 ![Color drawing with a map of the Rylan Commonwealth. It's a coastal area with the ocean to the east and a river running through the middle of the land through the ocean. 5 areas are outlined with dotted lines.](map-rylan.jpg 'I drew this map to help create/understand the geographic regions/features of Rylan. We also started experimented with 3D models for in-game map locations')
 

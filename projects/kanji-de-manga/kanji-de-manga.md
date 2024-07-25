@@ -24,6 +24,8 @@ I first encountered the Kanji de Manga series as a college intern at Japanime/Ma
 
 Kanji de Manga does exactly this: teach a new character on each page with a purposefully written comic, so that the reader can advance and eventually read Japanese comics on their own. It was as if the book's existence validated my desire and way of learning, and working with the company showed me that I wasn't alone at all.
 
+You can get the whole Kanji de Manga series [here](https://www.howtodrawmanga.com/#booksandebooks)!
+
 ![The Kanji "Shou" 章 meaning chapter or unit of writing, written with an brush-pen](kanji-shou.png '@class[small] @widths[280, 560] @sizes[250px, (min-resolution: 2x) 500px]')
 
 My first work on the Kanji de Manga series, as an intern, was on volume 4 as a translation checker. When I came back to work at Japanime in 2007, I became the layout/graphics person and translator on the series. For volumes 1-4, the books were made in Adobe Illustrator, with separate vector files for every single page. One of my first jobs was to port the layout from Adobe Illustrator to Adobe's book layout program InDesign, which made editing and updating the book dramatically easier. The new layout also helped us export the book for Kindle and other e-readers, which were just starting to come out at the time.
