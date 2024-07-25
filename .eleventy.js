@@ -52,6 +52,10 @@ module.exports = function (eleventyConfig) {
   // This one is for a basic 1-2 image treatment that is
   // controlled with styles
 
+  // Passthrough the CNAME file to configure domain name on gh-pages
+  // https://github.com/orgs/community/discussions/22366
+  eleventyConfig.addPassthroughCopy('CNAME');
+
   // Passthrough assets for non-bundled like images and fonts
   eleventyConfig.addPassthroughCopy('assets');
 };
