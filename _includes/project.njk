@@ -65,6 +65,9 @@
             </ul>
         {% endif %}
     </div>
+
+    {%- from 'mail-external.njk' import mailExternal %}
+    {{ mailExternal({bg: 'false'}) }}
 {% endblock %}
 
 {% block scripts %}

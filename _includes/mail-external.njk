@@ -1,5 +1,9 @@
+{%- macro mailExternal(params) -%}
 <div class="mail-external">
-    <div class="bg-dragon"></div>
+    {# Show the background by default, unless false is passed #}
+    {% if not params.bg %}
+        <div class="bg-dragon"></div>
+    {% endif %}
 
     <div class="container">
         <a href="{% include "mailto.njk" %}" class="mail-logo">
@@ -14,9 +18,13 @@
                     Say Hi!
                 </p>
             </a>
+            <p class="email-address">
+                (hi@naomi.computer)
+            </p>
             <div class="socials">
                 <p>Looking for socials? I'm not really into them, but if you need links for a work reason, they are <a href="#">here.</a></p>
             </div>
         </div>
     </div>
 </div>
+{%- endmacro -%}

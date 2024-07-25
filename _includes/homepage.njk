@@ -50,7 +50,8 @@
 
         
             {% include 'filter-projects.njk' %}
-            {% include 'mail-external.njk' %}
+            {%- from 'mail-external.njk' import mailExternal %}
+            {{ mailExternal() }}
 
         </div>
     </main>
