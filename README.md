@@ -6,7 +6,7 @@ Hi! This is the source-code for my portfolio website. An archive of work project
 
 ## About the repository
 
-This repository is currently private, but will be open sourced on launch. If you're reading this, hello time traveler!
+This repository is currently in the staging phase, awaiting its public launch. I haven't told anybody about this yet, so if you're here, hello you lucky person!
 
 I made this website using [Eleventy](https://www.11ty.dev/).  
 You can run/build the source using the standard commands in their docks. I've also configured a few scripts for convenience.
