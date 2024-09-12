@@ -24,7 +24,7 @@
 
 .header-home .introduction {
     position: absolute;
-    top: 10.94vw;
+    top: 10.35vw;
     left: 48.29vw;
     max-width: 445px;
 }
@@ -45,4 +45,11 @@
 .header-home .introduction h2 {
     font-size: 30px;
     font-weight: normal;
+}
+
+.header-home .header-link {
+    display: block;
+    padding-top: 1.8em;
+    font-size: 1.15em;
+    color: var(--accent-0);
 }
