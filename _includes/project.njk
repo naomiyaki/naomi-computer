@@ -3,11 +3,7 @@
 {% block bodyclass %}pagetype-detail{% endblock %}
 
 {% block template %}
-    <a href="/" class="floating-back">
-        <img class="backing" src="/assets/images/fbb_backing@2x.png"/>
-        <img class="lantern" src="/assets/images/fbb_lantern@2x.png"/>
-        <span>Back</span>
-    </a>
+    {% include 'floating-back.njk' %}
 
     {% if hero %}
         <div class="detail-hero">

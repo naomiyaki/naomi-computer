@@ -1,0 +1,19 @@
+{% extends "base.njk" %}
+
+{% block bodyclass %}pagetype-detail{% endblock %}
+
+{% block template %}
+    {% include 'floating-back.njk' %}
+
+    <div class="resume-header">
+        <img class="logo" src="/assets/images/resume_stamp@2x.png"/>
+        <div class="container">
+            <h1>Résumé - CV</h1>
+        </div>
+        
+        <div class="copy">
+            {{ content | safe }}
+        </div>
+    </div>
+
+{% endblock %}

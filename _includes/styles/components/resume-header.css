@@ -1,0 +1,17 @@
+.resume-header {
+    margin-top: -45px;
+}
+
+.resume-header .logo {
+    display: block;
+    max-width: 254px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.resume-header .container {
+    position: relative;
+    max-width: 355px;
+    margin: 0 auto;
+    text-align: center;
+}
