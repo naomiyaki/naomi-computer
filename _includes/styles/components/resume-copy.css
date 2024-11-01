@@ -1,0 +1,13 @@
+/* 
+    Copy Excerpt for Resume Page, can be abstracted
+    to something more general if there is ever another
+    page with similar layout 
+*/
+
+.resume-copy {
+    width: 630px;
+    max-width: 100%;
+    margin: 1.6em auto;
+    text-align: center;
+    font-size: 1.188em;
+}

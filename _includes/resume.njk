@@ -3,17 +3,40 @@
 {% block bodyclass %}pagetype-detail{% endblock %}
 
 {% block template %}
-    {% include 'floating-back.njk' %}
+{% include 'floating-back.njk' %}
 
-    <div class="resume-header">
-        <img class="logo" src="/assets/images/resume_stamp@2x.png"/>
-        <div class="container">
-            <h1>Résumé - CV</h1>
-        </div>
-        
-        <div class="copy">
-            {{ content | safe }}
-        </div>
+<div class="resume-header">
+    <img class="logo" src="/assets/images/resume_stamp@2x.png"/>
+    <div class="container">
+        <h1>Résumé - CV</h1>
     </div>
+</div>
+        
+<div class="resume-copy">
+    <div>
+        {{ content | safe }}
+    </div>
+</div>
+
+<div class="featured-icons-list">
+    <ul class="unstyled-list">
+        {% for resume in resumes %}
+        <li>
+            <a class="featured-icons-listing" href="{{resume.file}}">
+                <figure>
+                    <div class="icon">
+                        <img src="/assets/images/{{resume.icon}}"/>
+                    </div>
+                    <div class="thumb">
+                        <img class="thumb-image" src="/assets/images/{{resume.thumb}}"/>
+                    </div>
+                    <figcaption>{{resume.name}}</figcaption>
+                </figure>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 {% endblock %}
