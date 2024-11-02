@@ -1,10 +1,5 @@
 {%- macro mailExternal(params) -%}
 <div class="mail-external">
-    {# Show the background by default, unless false is passed #}
-    {% if not params.bg %}
-        <div class="bg-dragon"></div>
-    {% endif %}
-
     <div class="container">
         <a href="{% include "mailto.njk" %}" class="mail-logo">
             <img src="/assets/images/mail_dragonmail-logo.png"/>

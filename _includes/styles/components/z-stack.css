@@ -4,3 +4,7 @@
 .floating-back {
     z-index: 50;
 }
+
+.bg-dragon {
+    z-index: -60;
+}

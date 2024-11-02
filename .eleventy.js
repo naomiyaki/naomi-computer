@@ -15,6 +15,13 @@ const { mila, milaOptions } = require('./config/mila.js');
 
 // Add a custom collection with a list of filters that are used on projects, and the permalinks for the posts they contain
 module.exports = function (eleventyConfig) {
+  // Custom Shortcode to get the current year, useful for copyright
+  // and stuff
+  eleventyConfig.addShortcode('year', function () {
+    const today = new Date();
+    return today.getFullYear();
+  });
+
   // Get only content that matches a tag
   eleventyConfig.addCollection('filters', getFilters);
   eleventyConfig.addCollection('projectListings', getProjectListings);
