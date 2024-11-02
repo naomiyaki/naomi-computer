@@ -68,3 +68,18 @@ From: https://webaim.org/techniques/css/invisiblecontent/ */
     background: none;
     border: 0;
 }
+
+/* Appearance */
+/* --------------------- */
+/* Default link appearance */
+p a {
+  color: var(--accent-1);
+  border-radius: var(--corner-copy);
+  text-decoration: none;
+  transition: all 0.15s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+p a:hover {
+    background-color: var(--accent-1);
+    color: var(--neutral-0);
+}

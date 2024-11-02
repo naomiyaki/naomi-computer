@@ -55,9 +55,6 @@
 
 .default-copy p a {
     color: var(--accent-0);
-    text-decoration: none;
-    border-radius: 0.2em;
-    transition: all ease 0.15s;
 }
 
 .default-copy p a:hover {
