@@ -451,6 +451,7 @@ figure {
 }
 
 body {
+    position: relative; /* Necessary to position dragon footer background */
     color: var(--neutral-7);
     font-size: var(--font-size-base);
     font-family: var(--font-copy);
@@ -565,10 +566,12 @@ p a:hover {
 .bg-dragon {
     position: absolute;
     width: 1525px;
+    height: 50px;
+    max-width: 120%;
     height: 1064px;
-    overflow: hidden;
     right: 0;
-    z-index: -100;
+    bottom: 1px;
+    overflow: hidden;
 }
 
 .bg-dragon:before {
@@ -577,6 +580,7 @@ p a:hover {
     width: 100%;
     height: 100%;
     right: -150px;
+    bottom: -35px;
     background-image: url(/assets/images/dragon_summer-gradient.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -1029,52 +1033,6 @@ body.pagetype-detail {
     var(--neutral-7) 2.44769px -1.73459px 0px,
     var(--neutral-7) 2.88051px -0.838247px 0px;
 }
-/* <a> */
-.floating-back {
-	position: fixed;
-    left: 0;
-    top: calc(50% - 4.8em);
-    text-decoration: none;
-    font-size: 1.25rem;
-    width: 4.9em;
-}
-
-.floating-back .backing {
-    position: absolute;
-    display: block;
-    width: 103px;
-    height: auto;
-    top: -1.2em;
-    z-index: 0;
-}
-
-.floating-back .lantern {
-    display: block;
-    position: relative;
-    width: 3.7em;
-    height: auto;
-    transition: transform 0.5s cubic-bezier(.51,.01,.57,1.67);
-    z-index: 1;
-}
-
-.floating-back:hover .lantern {
-    transform: translateY(-5px);
-}
-
-.floating-back span {
-    display: block;
-    position: relative;
-    text-align: center;
-    font-family: var(--font-header);
-    color: var(--neutral-4);
-    padding-top: 0.15em;
-    z-index: 1;
-    transition: color 0.2s ease-out;
-}
-
-.floating-back:hover span {
-    color: var(--accent-1);
-}
 /* Filters */
 .filter-projects header {
     margin-top: 100px;  /* Temporary positioning */
@@ -1349,6 +1307,64 @@ body.pagetype-detail {
 .filter-projects .projects-list a:hover figure:before {
     opacity: 1;
     transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* <a> */
+.floating-back {
+	position: fixed;
+    left: 0;
+    top: calc(50% - 4.8em);
+    text-decoration: none;
+    font-size: 1.25rem;
+    width: 4.9em;
+}
+
+.floating-back .backing {
+    position: absolute;
+    display: block;
+    width: 103px;
+    height: auto;
+    top: -1.2em;
+    z-index: 0;
+}
+
+.floating-back .lantern {
+    display: block;
+    position: relative;
+    width: 3.7em;
+    height: auto;
+    transition: transform 0.5s cubic-bezier(.51,.01,.57,1.67);
+    z-index: 1;
+}
+
+.floating-back:hover .lantern {
+    transform: translateY(-5px);
+}
+
+.floating-back span {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: var(--font-header);
+    color: var(--neutral-4);
+    padding-top: 0.15em;
+    z-index: 1;
+    transition: color 0.2s ease-out;
+}
+
+.floating-back:hover span {
+    color: var(--accent-1);
+}
+.base-footer {
+    margin: 10em auto 0;
+    padding: 0 0 3em;
+    text-align: right;
+    width: var(--content-width);
+    max-width: 100%;
+}
+
+.base-footer p {
+    margin: 0;
+    font-size: 0.8em;
 }
 .header-home {
     position: relative;
@@ -1756,4 +1772,8 @@ body.pagetype-detail {
 
 .floating-back {
     z-index: 50;
+}
+
+.bg-dragon {
+    z-index: -60;
 }
