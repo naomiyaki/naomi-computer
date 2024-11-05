@@ -72,6 +72,20 @@
     font-size: 0.875em;
 }
 
+.mail-external .socials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.mail-external .socials li {
+    padding: 0.7em;
+}
+
+.mail-external .socials li img {
+    width: 24px;
+    height: auto;
+}
+
 /* Hover Effects */
 .mail-logo:hover + .mail-callout .prompt, .mail-text:hover .prompt {
     color: var(--accent-1);

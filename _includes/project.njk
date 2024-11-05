@@ -55,7 +55,9 @@
             <ul class="unstyled-list">
                 {% for filter in filters %}
                     <li>
-                        <a href="/?projectFilter={{filter | slugify}}#projects">{{filter}}</a>
+                        <a href="/?projectFilter={{filter | slugify}}#projects">
+                            <span>{{filter}}</span>
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
