@@ -608,17 +608,35 @@ p a:hover {
 }
 
 .connected-filters li + li {
-    margin-left: 3em;
+    margin-left: 2em;
 }
 
 .connected-filters li a {
-    text-decoration: none;
+    display: flex;
     color: var(--neutral-7);
+    text-decoration: none;
     transition: color 0.2s ease;
+}
+
+.connected-filters .filter-icon {
+    position: relative;
+    height: 1em;
+    padding: 0 0.3em;
+}
+
+.connected-filters .filter-icon img {
+    width: auto;
+    height: 64px;
+    transform: translateY(-32px);
+    transition: transform 0.3s ease;
 }
 
 .connected-filters li a:hover {
     color: var(--accent-0);
+}
+
+.connected-filters li a:hover .filter-icon img {
+    transform: translateY(-46px);
 } 
 .default-copy {
     font-size: 1rem;
