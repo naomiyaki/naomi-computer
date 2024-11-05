@@ -20,9 +20,9 @@
             <ul class="unstyled-list" id="filter-list">
                 {% for filter in collections.filters %}
                     <li>
-                        <button class="unstyled-button" data-filter="{{filter}}">
+                        <button class="unstyled-button" data-filter="{{filter}}" data-filter-name="{{filter | unslugify}}">
                             <img class="background" src="/assets/images/filter-projcets-filter-ticket.png"/>
-                            {{filter | capitalize}}
+                            {{filter | unslugify}}
                         </button>
                     </li>        
                 {% endfor %}

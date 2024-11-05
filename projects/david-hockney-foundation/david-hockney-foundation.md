@@ -5,7 +5,7 @@ tagline: Chronology and Collection Website, LACMA Interactive Exhibit
 thumb: thumb.jpg
 hero: hero.jpg
 filters:
-  - web dev
+  - web-dev
 info:
   - name: Company
     type: text

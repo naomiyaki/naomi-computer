@@ -5,7 +5,7 @@ tagline: 'Oregon Branch: Airtable Export Tools'
 thumb: thumb-building.jpg
 hero: hero-building.jpg
 filters:
-  - web dev
+  - web-dev
 info:
   - name: Years
     type: text

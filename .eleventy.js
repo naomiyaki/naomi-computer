@@ -22,6 +22,15 @@ module.exports = function (eleventyConfig) {
     return today.getFullYear();
   });
 
+  eleventyConfig.addAsyncFilter('unslugify', function (slug) {
+    const words = slug.split('-');
+    const capitalized = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+
+    return capitalized.join(' ');
+  });
+
   // Get only content that matches a tag
   eleventyConfig.addCollection('filters', getFilters);
   eleventyConfig.addCollection('projectListings', getProjectListings);

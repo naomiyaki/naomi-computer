@@ -16,11 +16,7 @@ const projectsList = document.getElementById('projects-list');
 const projects = JSON.parse(projectsText);
 
 // Heading markup for when a filter is applied
-const createFilterHeaderMarkup = function (filter) {
-  // Todo: Built a more centralized function to capitalize every word
-  // in a filter, and make it accessible to njk and js
-  const capitalizedFilter = filter.charAt(0).toUpperCase() + filter.slice(1);
-
+const createFilterHeaderMarkup = function (filterName) {
   return `
     <table class="filter-header">
     <tbody>
@@ -32,7 +28,7 @@ const createFilterHeaderMarkup = function (filter) {
                 <span>Filter</span>
             </td>
             <td class="filter-name">
-                ${capitalizedFilter}
+                ${filterName}
             </td>
             <td>
                 <button onclick="showAllProjects(event)" class="filters-clear unstyled-button">
@@ -46,7 +42,7 @@ const createFilterHeaderMarkup = function (filter) {
   `;
 };
 
-const createProjectListMarkup = function (projects, filter) {
+const createProjectListMarkup = function (projects, filter, filterName) {
   // Reduce the projects array by a filter,
   // if one has been passed in
   const filtered = projects.filter((project) => {
@@ -62,7 +58,7 @@ const createProjectListMarkup = function (projects, filter) {
   // Only use "filter-container class" if there's
   // an active filter.
   return `
-    ${filter ? createFilterHeaderMarkup(filter) : ''}
+    ${filter ? createFilterHeaderMarkup(filterName) : ''}
     <div class="${filter ? 'filter-container' : ''}">
       <ul class="unstyled-list">
           ${filtered
@@ -109,11 +105,16 @@ const filters = [...filterList.getElementsByTagName('BUTTON')];
 
 filters.forEach((element) => {
   const filter = element.dataset.filter;
+  const filterName = element.dataset.filterName;
   // For each filter, create an event handler to rewrite the
   // list with the filtered markup
   element.addEventListener('click', (e) => {
     e.preventDefault();
-    projectsList.innerHTML = createProjectListMarkup(projects, filter);
+    projectsList.innerHTML = createProjectListMarkup(
+      projects,
+      filter,
+      filterName
+    );
   });
 });
 
@@ -134,23 +135,24 @@ const removeHoverClass = async function (e) {
 const urlParams = new URLSearchParams(window.location.search);
 const filterParam = urlParams.get('projectFilter');
 
+const matchedElement = filters.find((element) => {
+  if (!filterParam) return false;
+  // Use a case insensitive comparison between query string
+  // and filters
+  return element.dataset.filter.toLowerCase() === filterParam.toLowerCase();
+});
+
 // If there's a filter in the query string, make sure it's
 // a real one
-const isQueryValid =
-  filterParam &&
-  filters.some((element) => {
-    // Use a case insensitive comparison between query string
-    // and filters
-    return element.dataset.filter.toLowerCase() === filterParam.toLowerCase();
-  });
-
-console.log('Is query valid??', isQueryValid);
+const isQueryValid = filterParam && matchedElement;
 
 // If there's a valid query string, pre-set the filter
 if (isQueryValid) {
   projectsList.innerHTML = createProjectListMarkup(
     projects,
-    filterParam.toLowerCase()
+    matchedElement.dataset.filter,
+    // Get the filter display name from the markup
+    matchedElement.dataset.filterName
   );
 } else {
   // Otherwise, show all projects when the script starts;

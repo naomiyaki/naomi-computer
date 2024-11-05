@@ -56,7 +56,10 @@
                 {% for filter in filters %}
                     <li>
                         <a href="/?projectFilter={{filter | slugify}}#projects">
-                            <span>{{filter}}</span>
+                            <div class="filter-icon">
+                                <img src="/assets/images/filter-icon_small_{{filter | slugify}}.png" />
+                            </div>
+                            <span>{{filter | unslugify}}</span>
                         </a>
                     </li>
                 {% endfor %}

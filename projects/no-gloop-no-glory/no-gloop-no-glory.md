@@ -5,7 +5,7 @@ tagline: Jam Game made in 3 days for Windows and Mac
 thumb: thumbnail-glory.jpg
 hero: hero-screenshot.jpg
 filters:
-  - 3d
+  - 3D
   - games
 info:
   - name: Year

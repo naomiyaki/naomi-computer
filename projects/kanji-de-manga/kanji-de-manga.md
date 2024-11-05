@@ -8,6 +8,7 @@ logo: logo.png
 filters:
   - comics
   - translation
+  - web-dev
 info:
   - name: Years
     type: text

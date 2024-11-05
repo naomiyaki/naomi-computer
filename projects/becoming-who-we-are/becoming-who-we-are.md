@@ -7,6 +7,7 @@ hero: hero-cover.jpg
 logo: logo.png
 filters:
   - comics
+  - 3D
 info:
   - name: Published
     type: text
