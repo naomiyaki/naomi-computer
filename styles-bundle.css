@@ -425,6 +425,8 @@
     --content-width: 990px;
     --content-medium: 720px;
 
+    --resp-side: 1.25em;
+
     /* Appearance */
     --corner-base: 0.7em;
     --corner-copy: 0.2em;
@@ -435,6 +437,11 @@
         so refer to this list when doing media queries!
     */
     --desktop-base: 1170px;
+    --desktop-small: 960px;
+    --tablet-portrait: 798px;
+    --mobile-landscape-small: 600px;
+    --mobile-small: 440px;
+    --mobile-minimum: 414px;
 } 
 html {
     scroll-behavior: smooth;
@@ -452,6 +459,11 @@ figure {
 
 body {
     position: relative; /* Necessary to position dragon footer background */
+    /* 
+        Mobile styles are designed to work down to 414px, 
+        stop resizing at 320 so things don't crunch if the user is doing something funky
+    */
+    min-width: 320px;
     color: var(--neutral-7);
     font-size: var(--font-size-base);
     font-family: var(--font-copy);
@@ -900,8 +912,23 @@ body.pagetype-detail {
 .detail-hero {
     position: relative;
     width: 100%;
-    max-width: 955px;
+    /* 955 width minus custom padding */
+    max-width: 1035px;
     margin: 0px auto;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
+}
+
+@media screen and (min-width: 600px) {
+    .detail-hero {
+        --resp-side: 2.5em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .detail-hero {
+        --resp-side: 4.6em;
+    }
 }
 
 .detail-hero .hero-crop {
@@ -929,15 +956,25 @@ body.pagetype-detail {
     left: 0;
     width: 100%;
     height: auto;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
 }
 
 .detail-hero .hero-logo {
     position: absolute;
-    width: 400px;
+    width: 220px;
     height: auto;
-    top: 57%;
-    left: -20px;
+    top: 55%;
 }
+
+@media screen and (min-width: 600px) {
+    .detail-hero .hero-logo {
+        width: 40%;
+        max-width: 400px;
+    }
+}
+
+
 .featured-icons-list ul {
     display: flex;
     align-items: start;
