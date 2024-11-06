@@ -38,7 +38,7 @@
     --tablet-portrait: 768px;
     --tablet-medium: 690px;
     --mobile-landscape-small: 600px;
-    --mobile-small: 440px;
+    --mobile-portrait-max: 440px;
     --mobile-minimum: 414px;
 }
 
