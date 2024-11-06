@@ -9,7 +9,7 @@
     --neutral-0-glass: rgb(252, 248, 244, 0.7);
 
     /* Typography */
-    --font-size-base: 16px;
+    --font-size-base: 15px;
     --font-bold: 700;
     --font-copy: 'Philosopher', sans-serif;
     --font-header: 'Croissant One', serif;
@@ -39,4 +39,16 @@
     --mobile-landscape-small: 600px;
     --mobile-small: 440px;
     --mobile-minimum: 414px;
+}
+
+@media screen and (min-width: 440px) {
+    :root {
+        --resp-side: 1.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --font-size-base: 16px;
+    }
 }

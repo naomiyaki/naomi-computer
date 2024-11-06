@@ -3,6 +3,8 @@
     --image-margin: 3em;
     --line-margin: 2.25em;
     --single-margin: 1em;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
 }
 
 .default-copy h2 {
