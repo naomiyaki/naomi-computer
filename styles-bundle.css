@@ -441,7 +441,7 @@
     --tablet-portrait: 768px;
     --tablet-medium: 690px;
     --mobile-landscape-small: 600px;
-    --mobile-small: 440px;
+    --mobile-portrait-max: 440px;
     --mobile-minimum: 414px;
 }
 
@@ -1413,19 +1413,60 @@ body.pagetype-detail {
 .floating-back {
 	position: fixed;
     left: 0;
-    top: calc(50% - 4.8em);
+    bottom: 1.6em;
     text-decoration: none;
-    font-size: 1.25rem;
+    /* 
+        Local size of component can be controlled
+        with font-size 
+    */
+    font-size: 0.65rem;
     width: 4.9em;
+}
+
+@media screen and (min-width: 600px) {
+    .floating-back {
+       font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .floating-back {
+        bottom: auto;
+        top: calc(50% - 4.8em);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .floating-back {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .floating-back {
+        font-size: 1.25rem;
+    }
 }
 
 .floating-back .backing {
     position: absolute;
     display: block;
-    width: 103px;
+    width: 5.6em;
     height: auto;
     top: -1.2em;
     z-index: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .floating-back .backing {
+        width: 5.3em;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .floating-back .backing {
+        width: 5.15em;
+    }
 }
 
 .floating-back .lantern {
@@ -1446,10 +1487,25 @@ body.pagetype-detail {
     position: relative;
     text-align: center;
     font-family: var(--font-header);
+    font-size: 1.35em;
     color: var(--neutral-4);
-    padding-top: 0.15em;
+    padding-top: 0.34em;
     z-index: 1;
     transition: color 0.2s ease-out;
+}
+
+@media screen and (min-width: 600px) {
+    .floating-back span {
+        font-size: 1.12em;
+        padding-top: 0.28em;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .floating-back span {
+        font-size: 1em;
+        padding-top: 0.2em;
+    }
 }
 
 .floating-back:hover span {
