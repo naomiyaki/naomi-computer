@@ -1,8 +1,23 @@
 .detail-hero {
     position: relative;
     width: 100%;
-    max-width: 955px;
+    /* 955 width minus custom padding */
+    max-width: 1035px;
     margin: 0px auto;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
+}
+
+@media screen and (min-width: 600px) {
+    .detail-hero {
+        --resp-side: 2.5em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .detail-hero {
+        --resp-side: 4.6em;
+    }
 }
 
 .detail-hero .hero-crop {
@@ -30,12 +45,21 @@
     left: 0;
     width: 100%;
     height: auto;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
 }
 
 .detail-hero .hero-logo {
     position: absolute;
-    width: 400px;
+    width: 220px;
     height: auto;
-    top: 57%;
-    left: -20px;
+    top: 55%;
 }
+
+@media screen and (min-width: 600px) {
+    .detail-hero .hero-logo {
+        width: 40%;
+        max-width: 400px;
+    }
+}
+

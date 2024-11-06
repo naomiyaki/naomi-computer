@@ -22,6 +22,8 @@
     --content-width: 990px;
     --content-medium: 720px;
 
+    --resp-side: 1.25em;
+
     /* Appearance */
     --corner-base: 0.7em;
     --corner-copy: 0.2em;
@@ -32,4 +34,9 @@
         so refer to this list when doing media queries!
     */
     --desktop-base: 1170px;
+    --desktop-small: 960px;
+    --tablet-portrait: 798px;
+    --mobile-landscape-small: 600px;
+    --mobile-small: 440px;
+    --mobile-minimum: 414px;
 }
