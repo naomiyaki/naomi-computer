@@ -412,7 +412,7 @@
     --neutral-0-glass: rgb(252, 248, 244, 0.7);
 
     /* Typography */
-    --font-size-base: 16px;
+    --font-size-base: 15px;
     --font-bold: 700;
     --font-copy: 'Philosopher', sans-serif;
     --font-header: 'Croissant One', serif;
@@ -442,9 +442,22 @@
     --mobile-landscape-small: 600px;
     --mobile-small: 440px;
     --mobile-minimum: 414px;
+}
+
+@media screen and (min-width: 440px) {
+    :root {
+        --resp-side: 1.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --font-size-base: 16px;
+    }
 } 
 html {
     scroll-behavior: smooth;
+    font-size: var(--font-size-base);
 }
 
 * {
@@ -465,7 +478,6 @@ body {
     */
     min-width: 320px;
     color: var(--neutral-7);
-    font-size: var(--font-size-base);
     font-family: var(--font-copy);
     text-rendering: optimizeLegibility;
     background-color: var(--neutral-0);
@@ -495,6 +507,17 @@ From: https://webaim.org/techniques/css/invisiblecontent/ */
     margin: 0 auto;
 }
 
+.unstyled-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.unstyled-button {
+    background: none;
+    border: 0;
+}
+
 /* Spacers */
 .spacer-2 {
     display: block;
@@ -507,17 +530,6 @@ From: https://webaim.org/techniques/css/invisiblecontent/ */
     font-size: 2.188em;
     font-family: var(--font-header);
     font-weight: 600;
-}
-
-.unstyled-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.unstyled-button {
-    background: none;
-    border: 0;
 }
 
 /* Appearance */
@@ -655,6 +667,8 @@ p a:hover {
     --image-margin: 3em;
     --line-margin: 2.25em;
     --single-margin: 1em;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
 }
 
 .default-copy h2 {
