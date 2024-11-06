@@ -35,7 +35,8 @@
     */
     --desktop-base: 1170px;
     --desktop-small: 960px;
-    --tablet-portrait: 798px;
+    --tablet-portrait: 768px;
+    --tablet-medium: 690px;
     --mobile-landscape-small: 600px;
     --mobile-small: 440px;
     --mobile-minimum: 414px;
@@ -50,5 +51,17 @@
 @media screen and (min-width: 600px) {
     :root {
         --font-size-base: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --resp-side: 3.125em;
+    }    
+}
+
+@media screen and (min-width: 960px) {
+    :root {
+        --resp-side: 4.5em;
     }
 }

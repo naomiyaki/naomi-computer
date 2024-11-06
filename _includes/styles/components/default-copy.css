@@ -1,10 +1,29 @@
 .default-copy {
     font-size: 1rem;
-    --image-margin: 3em;
-    --line-margin: 2.25em;
+    --image-margin: 2em;
+    --line-margin: 1.2em;
     --single-margin: 1em;
     padding-right: var(--resp-side);
     padding-left: var(--resp-side);
+}
+
+@media screen and (min-width: 440px) {
+    .default-copy {
+        --image-margin: 2.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .default-copy {
+        --line-margin: 1.75em;
+    }
+}
+
+@media screen and (min-width: 690px) {
+    .default-copy {
+        --image-margin: 3em;
+        --line-margin: 2.25em;
+    }
 }
 
 .default-copy h2 {
