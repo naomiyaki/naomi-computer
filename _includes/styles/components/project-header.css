@@ -1,19 +1,59 @@
 .project-header {
     width: 100%;
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding-top: 1.375em;
+    padding-top: 0;
+    padding-right: var(--resp-side);
+    padding-left: var(--resp-side);
+}
+
+@media screen and (min-width: 600px) {
+    .project-header {
+        padding-top: 0.65em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-header {
+        padding-top: 1.375em;
+    }
 }
 
 .project-header .header-copy {
     /* Add padding on resize */
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
+
+@media screen and (min-width: 768px) {
+    .project-header h1,
+    .project-header .project-tagline {
+        max-width: 73%;
+    }
+}
+
 
 .project-header h1 {
     font-family: var(--font-header);
-    font-size: 1.938em;
+    font-size: 1.6em;
     line-height: 1.4em;
-    margin: 0.67em 0 0.45em;
+    margin: 0.67em 0 0.25em;
+}
+
+@media screen and (min-width: 440px) {
+    .project-header h1 {
+        font-size: 1.75em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .project-header h1 {
+        font-size: 1.938em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-header h1 {
+        margin: 0.67em 0 0.45em;
+    }
 }
 
 .project-header .project-tagline {
@@ -23,11 +63,35 @@
 
 .project-header .horizontal-rule {
     width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.project-header .horizontal-rule .line {
+    display: none;
+    width: 100%;
     height: 10px;
     margin: 2em 0;
-    margin-left: -2.5em;
-    /* background-color: black; */
+    margin-left: calc((var(--resp-side) * -1) - 10px);
     background-image: url(/assets/images/project-header_hr-full@2x.png);
     background-size: var(--max-width);
     background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+    .project-header .horizontal-rule .line {
+        display: block;
+        width: 86%;
+        max-width: 790px;
+        height: 10px;
+        margin: 2em 0;
+        margin-left: -55px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .project-header .horizontal-rule .line {
+        width: 79.798%;
+        margin-left: -40px;
+    }
 }

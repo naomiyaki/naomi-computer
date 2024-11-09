@@ -3,4 +3,6 @@ body.pagetype-detail {
     background-position: 0% 0%, 100% 0%;
     background-repeat: repeat-y, repeat-y;
     background-size: 716px 1926px, 700px 1926px;
+    /* Allows info-screen to go off page without causing scroll */
+    overflow-x: hidden;
 }
