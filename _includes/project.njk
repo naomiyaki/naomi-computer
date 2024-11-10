@@ -51,22 +51,24 @@
         </main>
     </div>
     
-    <div class="project-footer connected-filters">
-        <div class="prompt">Find some more projects!</div>
-        {% if filters %}
-            <ul class="unstyled-list">
-                {% for filter in filters %}
-                    <li>
-                        <a href="/?projectFilter={{filter | slugify}}#projects">
-                            <div class="filter-icon">
-                                <img src="/assets/images/filter-icon_small_{{filter | slugify}}.png" />
-                            </div>
-                            <span>{{filter | unslugify}}</span>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="project-footer">
+        <div class="connected-filters">
+            <div class="prompt"><p>Find some more projects!</p></div>
+            {% if filters %}
+                <ul class="unstyled-list">
+                    {% for filter in filters %}
+                        <li>
+                            <a href="/?projectFilter={{filter | slugify}}#projects">
+                                <div class="filter-icon">
+                                    <img src="/assets/images/filter-icon_small_{{filter | slugify}}.png" />
+                                </div>
+                                <span>{{filter | unslugify}}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
     </div>
 
     {%- from 'mail-external.njk' import mailExternal %}

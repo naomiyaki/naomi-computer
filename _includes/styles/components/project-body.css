@@ -5,8 +5,7 @@
     margin-bottom: 4.5em;
 }
 
-.project-footer.connected-filters {
+.project-footer {
     width: 100%;
-    max-width: 1070px;
-    margin: 0 auto;
+    padding: 0 1.25em;
 }
