@@ -441,6 +441,7 @@
     --tablet-portrait: 768px;
     --tablet-medium: 690px;
     --mobile-landscape-small: 600px;
+    --desktop-minimum: 480px;
     --mobile-portrait-max: 440px;
     --mobile-minimum: 414px;
 }
@@ -623,14 +624,31 @@ p a:hover {
     background-repeat: no-repeat;
 } 
 .connected-filters {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     border-image: url('/assets/images/custom-border02.png') 9;
     border-width: 4px;
     border-style: solid;
     background-color: #fff;
+}
+
+@media screen and (min-width: 440px) {
+    .connected-filters {
+        font-size: 1.02rem;
+    }
+}
+
+@media screen and (min-width: 690px) {
+    .connected-filters {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .connected-filters {
+        font-size: 1.1rem;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -646,10 +664,24 @@ p a:hover {
 
 .connected-filters .prompt {
     display: flex;
-    height: 2.5em;
-    padding: 0 0.75em;
+    height: 2.75em;
     border-image: url('/assets/images/custom-border02.png') 9;
-    border-right: 4px solid;
+    border-bottom: 4px solid;
+}
+
+@media screen and (min-width: 690px) {
+    .connected-filters .prompt {
+        height: 2.75em;
+        padding: 0 0.75em;
+        border-right: 4px solid;
+        border-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .connected-filters .prompt {
+        height: 2.5em;
+    }
 }
 
 .connected-filters .prompt p {
@@ -658,11 +690,26 @@ p a:hover {
 
 .connected-filters ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
     padding: 0 1em;
 }
 
 .connected-filters li + li {
-    margin-left: 1.35em;
+    margin-left: 0.5em;
+}
+
+@media screen and (min-width: 440px) {
+    .connected-filters li+li {
+        margin-left: 1em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .connected-filters li + li {
+        margin-left: 1.35em;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -673,6 +720,7 @@ p a:hover {
 
 .connected-filters li a {
     display: flex;
+    align-items: center;
     color: var(--neutral-7);
     text-wrap: nowrap;
     text-decoration: none;
@@ -680,16 +728,34 @@ p a:hover {
 }
 
 .connected-filters .filter-icon {
-    position: relative;
-    height: 1em;
-    padding: 0 0.3em;
+    padding: 0 0.3em 0 0;
 }
 
 .connected-filters .filter-icon img {
     width: auto;
-    height: 3.2em;
-    transform: translateY(-32px);
+    height: 32px;
+    transform: translateY(-0.3em);
     transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 440px) {
+    .connected-filters .filter-icon img { 
+        height: 2.5em;
+    }
+}
+
+@media screen and (min-width: 690px) {
+    .connected-filters .filter-icon img {
+        height: 2.8em;
+        transform: translateY(-0.4em);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .connected-filters .filter-icon img {
+        height: 3.2em;
+        transform: translateY(-0.7em);
+    }
 }
 
 .connected-filters li a:hover {
@@ -697,7 +763,13 @@ p a:hover {
 }
 
 .connected-filters li a:hover .filter-icon img {
-    transform: translateY(-46px);
+    transform: translateY(-1em);
+}
+
+@media screen and (min-width: 768px) {
+    .connected-filters li a:hover .filter-icon img {
+        transform: translateY(-1.3em);
+    }
 } 
 .default-copy {
     font-size: 1rem;
