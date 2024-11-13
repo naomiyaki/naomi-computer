@@ -2,17 +2,54 @@
     position: relative;
 }
 
-.header-home img {
+
+.header-home figure {
+    overflow: hidden;
+}
+
+.header-home .window {
+    display: block;
+    width: 112%;
+    margin-left: -6.5%;
+}
+
+@media (min-width: 600px) {
+    .header-home .window {
+        width: 107%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-home .window {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.header-home .window img {
     width: 100%;
 }
 
 .header-home .window-view img {
     position: absolute;
     top: 6.2vw;
-    left: 8vw;
+    left: 1.6vw;
     max-width: 414px;
-    width: 35.385%;
+    width: 40.385%;
     z-index: -1;
+}
+
+@media (min-width: 600px) {
+  .header-home .window-view img {
+    width: 38.385%;
+  }  
+}
+
+@media (min-width: 768px) {
+    .header-home .window-view img {
+        left: 8vw;
+        width: 35.385%;
+    }
 }
 
 @media (min-width: 1170px) {
@@ -24,32 +61,90 @@
 
 .header-home .introduction {
     position: absolute;
-    top: 10.35vw;
-    left: 48.29vw;
-    max-width: 445px;
+    top: 11.2vw;
+    left: 48.75vw;
+    width: 42vw;
+    max-width: 470px;
+    font-size: 1.368vw;
+}
+
+@media (min-width: 600px) {
+    .header-home .introduction {
+        top: 11.5vw;
+        left: 46.5vw;
+        width: 40.171vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-home .introduction {
+        top: 10.35vw;
+        left: 48.15vw;
+    }
 }
 
 @media (min-width: 1170px) {
     .header-home .introduction {
-        top: 128px;
+        font-size: 16px;
+        top: 122px;
         left: 565px;
     }
 }
 
 .header-home .greeting {
-    font-size: 40px;
+    font-size: 3.1em;
     font-family: var(--font-header);
     color: #F6A6A7;
 }
 
-.header-home .introduction h2 {
-    font-size: 30px;
-    font-weight: normal;
+@media (min-width: 600px) {
+    .header-home .greeting {
+        font-size: 2.85em;
+    }
 }
+
+@media (min-width: 768px) {
+    .header-home .greeting {
+        font-size: 2.5em;
+    }
+}
+
+.header-home .introduction h2 {
+    font-size: 2.2em;
+    font-weight: normal;
+    margin: 0.6em 0 0.83em;
+}
+
+@media (min-width: 600px) {
+    .header-home .introduction h2 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-home .introduction h2 {
+        font-size: 1.875em;
+        margin: 0.83em 0;
+    }
+}
+
 
 .header-home .header-link {
     display: block;
-    padding-top: 1.8em;
-    font-size: 1.15em;
+    font-size: 1.65em;
+    /* padding-top: 1.8em; */
+    /* font-size: 1.15em; */
     color: var(--accent-0);
+}
+
+@media (min-width: 768px) {
+    .header-home .header-link {
+        padding-top: 1.1em;
+    }
+}
+
+@media (min-width: 960px) {
+    .header-home .header-link {
+        font-size: 1.3em;
+    }
 }
