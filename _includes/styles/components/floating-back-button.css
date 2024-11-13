@@ -2,7 +2,7 @@
 .floating-back {
 	position: fixed;
     left: 0;
-    bottom: 1.6em;
+    bottom: 2em;
     text-decoration: none;
     /* 
         Local size of component can be controlled
