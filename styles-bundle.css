@@ -1536,7 +1536,7 @@ body.pagetype-detail {
 .floating-back {
 	position: fixed;
     left: 0;
-    bottom: 1.6em;
+    bottom: 2em;
     text-decoration: none;
     /* 
         Local size of component can be controlled
@@ -1635,16 +1635,34 @@ body.pagetype-detail {
     color: var(--accent-1);
 }
 .base-footer {
-    margin: 10em auto 0;
-    padding: 0 0 3em;
+    display: flex;
+    justify-content: flex-end;
+    margin: 6.5em 0 0 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.base-footer .container {
+    width: 75%;
+    max-width: 570px;
+    margin: 0 0 0 auto;
+    padding: 0.5em 0.7em 0.5em 0.5em;
     text-align: right;
-    width: var(--content-width);
-    max-width: 100%;
+    border-image: url('/assets/images/custom-border02.png') 9;
+    border-width: 4px;
+    border-style: solid;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #fff;
 }
 
 .base-footer p {
     margin: 0;
     font-size: 0.8em;
+}
+
+.base-footer p + p {
+    margin-top: 0.8em;
 }
 .header-home {
     position: relative;
