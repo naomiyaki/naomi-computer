@@ -1,4 +1,15 @@
 /* Filters */
+.filter-projects {
+    padding: 0 0.75em;
+    --filter-shadow: drop-shadow(0px 2px 1px rgba(0, 0, 0, .4));
+}
+
+@media (min-width: 690px) {
+    .filter-projects {
+        padding: 0 1.35em;
+    }
+}
+
 .filter-projects header {
     margin-top: 100px;  /* Temporary positioning */
     text-align: center;
@@ -17,33 +28,99 @@
 
 .filter-projects .app {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
+@media (min-width: 1024px) {
+    .filter-projects .app {
+        flex-wrap: nowrap;
+    }
+}
+
+.filter-projects .app .filters {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .filter-projects .app .filters {
+        width: auto;
+    }
+}
+
+.filter-projects .filters ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.625em;
+}
+
+@media (min-width: 512px) {
+    .filter-projects .filters ul {
+        margin-bottom: 1.4em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .filter-projects .filters ul {
+        display: block;
+    }
+}
+
 .filter-projects .filters li {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
+    margin: 0 0.35em 0.5em;
     transition: transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
     transform-origin: center left;
+    filter: var(--filter-shadow);
+}
+
+@media (min-width: 768px) {
+    .filter-projects .filters li {
+        margin: 0 0.53em 0.5em;
+    }  
 }
 
 .filter-projects .filters .background {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
-    filter: drop-shadow(0px 2px 1px rgba(0,0,0,.4))
+    filter: var(--filter-shadow);
 }
 
 .filter-projects .filters button {
     position: relative;
     display: block;
     cursor: pointer;
-    width: 9.583em;
-    padding: .85em 0 .85em .8em;
     text-align: left;
     font-family: var(--font-header);
-    font-size: 1.3em;
+    font-size: 1.1em;
+    padding: 0.35em 1em;
+    text-wrap: nowrap;
+    background-image: url('/assets/images/filter-projcets-filter-ticket.png');
+    background-position: center;
+    clip-path: polygon(0% 0%,
+                calc(100% - 8px) 0%,
+                100% 25%,
+                100% 100%,
+                0% 100%);
+}
+
+@media (min-width: 768px) {
+    .filter-projects .filters button {
+        padding: 0.5em 1.2em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .filter-projects .filters button {
+        width: 9.583em;
+        padding: .85em 0 .85em .8em;
+        font-size: 1.3em;
+    }
 }
 
 .filter-projects .filters li:hover {
@@ -61,7 +138,9 @@
 /* Project List */
 /* -------------------- */
 .filter-projects .projects-list {
-    width: 75.378%;
+    /* width: 75.378%; */
+    width: 100%;
+    margin: 0 auto;
     --nav-height: 60px;
     --border-image: url('/assets/images/custom-border02.png') 9;
     --border-style: 4px solid;
@@ -169,13 +248,31 @@
 }
 
 .filter-projects .projects-list li {
-    width: 29.652%;
-    margin-left: 5.5%;
+    width: 45.5%;
+    max-width: 240px;
+    margin-left: 7%;
+    /* width: 29.652%;
+    margin-left: 5.5%; */
 }
 
-.filter-projects .projects-list li:first-child,
-.filter-projects .projects-list li:nth-child(3n + 4) {
-    margin-left: 0;
+@media (min-width: 690px) {
+    .filter-projects .projects-list li {
+        width: 29.652%;
+        margin-left: 5.5%;
+    }
+}
+
+@media (max-width: 679px) {
+    .filter-projects .projects-list li:nth-child(odd) {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 690px) {
+    .filter-projects .projects-list li:first-child,
+    .filter-projects .projects-list li:nth-child(3n + 4) {
+        margin-left: 0;
+    }
 }
 
 .filter-projects .projects-list a {
@@ -188,7 +285,14 @@
 
 .filter-projects .projects-list figure {
     position: relative;
-    padding-bottom: 3.25em;
+    /* padding-bottom: 3.25em; */
+    margin-bottom: 1.65em;
+}
+
+@media (min-width: 690px) {
+    .filter-projects .projects-list figure {
+        margin-bottom: 2.45em;
+    }
 }
 
 /* TODO: Maybe convert mask images to clip paths */
