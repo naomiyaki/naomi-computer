@@ -152,9 +152,15 @@
     /* width: 75.378%; */
     width: 100%;
     margin: 0 auto;
-    --nav-height: 60px;
+    --nav-height: 48px;
     --border-image: url('/assets/images/custom-border02.png') 9;
     --border-style: 4px solid;
+}
+
+@media (min-screen: 690px) {
+    .filter-project .projects-list {
+        --nav-height: 60px;
+    }
 }
 
 /* Filter sheet */
@@ -181,10 +187,11 @@
 
 .filter-projects .filter-header .label {
     position: relative;    
+    width: 32px;
     height: var(--nav-height);
     border-image: var(--border-image);
     border-right: var(--border-style);
-    padding: 0 .23em;
+    padding: 0 0.75em;
 }
 
 .filter-projects .filter-header .label span {
@@ -200,12 +207,24 @@
 
 .filter-projects .filter-header .filter-name {
     position: relative;
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 0px 0.7em;
-    width: 28%;
+    width: 45%;
     border-image: var(--border-image);
     border-right: var(--border-style);
-    background-image: url()
+}
+
+@media (min-width: 480px) {
+    .filter-projects .filter-header .filter-name {
+        width: 35%;
+    }
+}
+
+@media (min-width: 690px) {
+    .filter-projects .filter-header .filter-name {
+        font-size: 1.4em;
+        width: 28%;
+    }
 }
 
 .filter-projects .filter-header .filter-name:before {
@@ -227,13 +246,26 @@
     align-items: center;
     font-size: 1.063em;
     cursor: pointer;
-    padding: 0px 1em 0;
+    padding: 0px 0.4em 0 0.6em;
+}
+
+@media (min-width: 690px) {
+    .filter-projects .filter-header .filters-clear {
+        padding: 0px 1em 0;
+    }
 }
 
 .filter-projects .filter-header .filters-clear img {
-    width: 30px;
+    width: 25px;
     height: auto;
-    padding-right: .4em;
+    padding-right: .3em;
+}
+
+@media (min-width: 690px) {
+    .filter-projects .filter-header .filters-clear img {
+        width: 30px;
+        padding-right: .4em;
+    }
 }
 
 .filter-projects .filter-container {
@@ -244,10 +276,22 @@
     border-top: 0;
     border-radius: 4px;
     margin-top: -4px;
-    padding: 2.25em 1.875em;
+    padding: 2em 1.2em;
     background-color: var(--neutral-0-glass);
     backdrop-filter: var(--glass-blur);
     z-index: 0;
+}
+
+@media (min-width: 512px) {
+    .filter-projects .filter-container {
+        padding: 2em 1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .filter-projects .filter-container {
+        padding: 2.25em 1.875em;
+    }
 }
 
 /* Project Listings */
