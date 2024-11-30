@@ -45,6 +45,7 @@
 @media (min-width: 1024px) {
     .filter-projects .app .filters {
         width: auto;
+        padding-right: 3.2em;
     }
 }
 
@@ -57,7 +58,13 @@
 
 @media (min-width: 512px) {
     .filter-projects .filters ul {
-        margin-bottom: 1.4em;
+        margin-bottom: 1.7em;
+    }
+}
+
+@media (min-width: 690px) {
+    .filter-projects .filters ul {
+        margin-bottom: 2.25em;
     }
 }
 
@@ -115,11 +122,15 @@
     }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1024px) {
     .filter-projects .filters button {
         width: 9.583em;
         padding: .85em 0 .85em .8em;
         font-size: 1.3em;
+        background-size: contain;
+        background-position: 0;
+        background-repeat: no-repeat;
+        clip-path: none;
     }
 }
 
@@ -333,7 +344,7 @@
 }
 
 .filter-projects .projects-list figcaption {
-    padding-top: .4em;
+    padding: 0.4em 12% 0;
 }
 
 .filter-projects .projects-list figure:before {
