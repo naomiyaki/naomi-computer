@@ -1,9 +1,51 @@
 .bg-dragon {
+    position: relative;
+}
+
+.bg-dragon .container {
     position: absolute;
     width: 1525px;
-    height: 50px;
-    max-width: 120%;
     height: 1064px;
+    max-width: 110%;
+    top: -18vw;
+    right: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 1170px) {
+    .bg-dragon .container {
+        top: -214px;
+    }
+}
+
+@media (min-width: 768px) {
+   .bg-dragon .container {
+    max-width: 100%;
+   } 
+}
+
+.bg-dragon .container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -15%;
+    background-image: url(/assets/images/dragon_summer-gradient.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .bg-dragon .container:before {
+        right: -10%;
+    }
+}
+
+/* .bg-dragon {
+    position: absolute;
+    width: 1525px;
+    height: 1064px;
+    max-width: 120%;
     right: 0;
     bottom: 1px;
     overflow: hidden;
@@ -19,4 +61,4 @@
     background-image: url(/assets/images/dragon_summer-gradient.png);
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */

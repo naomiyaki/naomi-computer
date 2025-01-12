@@ -57,11 +57,15 @@
 
         
             {% include 'filter-projects.njk' %}
+        </div>
+            <div class="bg-dragon">
+                <div class="container"></div>
+            </div>
+        <div class="container">
             {%- from 'mail-external.njk' import mailExternal %}
             {{ mailExternal() }}
         </div>
     </main>
-    <div class="bg-dragon"></div>
 {% endblock %}
 
 {% block scripts %}
