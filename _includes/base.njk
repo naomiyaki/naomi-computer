@@ -8,9 +8,11 @@
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
     {# Markup for individual page templates #}
-    {% block template %}
-        {# Default markup can go in here if necessary #}
-    {% endblock %}
+    <main>
+        {% block template %}
+            {# Default markup can go in here if necessary #}
+        {% endblock %}
+    </main>
 
     {% include 'base-footer.njk' %}
 

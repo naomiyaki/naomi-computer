@@ -1,71 +1,69 @@
 {% extends "base.njk" %}
     
 {% block template %}
-    <main>
-        <div class="container">
-            <header class="header-home">
-                {# Full width header with castle frame and changable inner image #}
-                {# Image should be 828 * 730 (or larger, with the same ratio) at 2x #}
-                <figure>
-                    <picture class="window-view">
-                        <source 
-                            srcset="/assets/images/heading-view-robbi@2x.jpg 920w"/>
-                        <img src="/assets/images/heading-view-robbi.jpg"/>
-                    </picture>
+    <div class="container">
+        <header class="header-home">
+            {# Full width header with castle frame and changable inner image #}
+            {# Image should be 828 * 730 (or larger, with the same ratio) at 2x #}
+            <figure>
+                <picture class="window-view">
+                    <source 
+                        srcset="/assets/images/heading-view-robbi@2x.jpg 920w"/>
+                    <img src="/assets/images/heading-view-robbi.jpg"/>
+                </picture>
 
-                    <picture class="window">
-                        <source 
-                            srcset="/assets/images/header-castle-window@2x.png 2260w,
-                                    /assets/images/header-castle-window.png 1130w"/>
-                        <img src="/assets/images/header-castle-window.png"/>
-                    </picture>
-                </figure>
-                <div class="introduction">
-                    <span class="greeting">
-                        Hello! I'm Naomi
-                    </span>
-                    <h2>
-                        Making big stories accessible with
-                        art, writing, and code 💖 I love learning things. 日本語も大歓迎！
-                    </h2>
-                    <a href="/resume-cv" class="header-link">
-                        Download a CV/Résumé
-                    </a>
+                <picture class="window">
+                    <source 
+                        srcset="/assets/images/header-castle-window@2x.png 2260w,
+                                /assets/images/header-castle-window.png 1130w"/>
+                    <img src="/assets/images/header-castle-window.png"/>
+                </picture>
+            </figure>
+            <div class="introduction">
+                <span class="greeting">
+                    Hello! I'm Naomi
+                </span>
+                <h2>
+                    Making big stories accessible with
+                    art, writing, and code 💖 I love learning things. 日本語も大歓迎！
+                </h2>
+                <a href="/resume-cv" class="header-link">
+                    Download a CV/Résumé
+                </a>
+            </div>
+        </header>
+        <div class="subhead-home">
+            <div class="container">
+                <div class="callout-0">
+                    <img class="backing" src="/assets/images/subhead-callout_wide.png"/>
+                    <figure class="sticker-values">
+                        <img src="/assets/images/subhead-sticker-values.png"/>
+                        <figcaption>I want to do work that contributes to my values</figcaption>
+                    </figure>
                 </div>
-            </header>
-            <div class="subhead-home">
-                <div class="container">
-                    <div class="callout-0">
-                        <img class="backing" src="/assets/images/subhead-callout_wide.png"/>
-                        <figure class="sticker-values">
-                            <img src="/assets/images/subhead-sticker-values.png"/>
-                            <figcaption>I want to do work that contributes to my values</figcaption>
-                        </figure>
-                    </div>
-                    <div class="callout-1">
-                        <img class="backing" src="/assets/images/subhead-callout_narrow.png" />
-                        <figure class="sticker-3d">
-                            <img src="/assets/images/subhead-sticker-3d.png"/>
-                            <figcaption>Currently excited about 3D modeling</figcaption>
-                        </figure>
-                    </div>
+                <div class="callout-1">
+                    <img class="backing" src="/assets/images/subhead-callout_narrow.png" />
+                    <figure class="sticker-3d">
+                        <img src="/assets/images/subhead-sticker-3d.png"/>
+                        <figcaption>Currently excited about 3D modeling</figcaption>
+                    </figure>
                 </div>
             </div>
-            
-            <div class="bg-cloud-right"></div>
-            <div class="bg-cloud-left"></div>
-
+        </div>
         
-            {% include 'filter-projects.njk' %}
+        <div class="bg-cloud-right"></div>
+        <div class="bg-cloud-left"></div>
+
+    
+        {% include 'filter-projects.njk' %}
+    </div>
+        <div class="bg-dragon">
+            <div class="container"></div>
         </div>
-            <div class="bg-dragon">
-                <div class="container"></div>
-            </div>
-        <div class="container">
-            {%- from 'mail-external.njk' import mailExternal %}
-            {{ mailExternal() }}
-        </div>
-    </main>
+    <div class="container">
+        {%- from 'mail-external.njk' import mailExternal %}
+        {{ mailExternal() }}
+    </div>
 {% endblock %}
 
 {% block scripts %}

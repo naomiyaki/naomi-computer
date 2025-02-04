@@ -1,5 +1,6 @@
 .base-footer {
     display: flex;
+    flex-shrink: 0;
     justify-content: flex-end;
     margin: 6.5em 0 0 0;
     width: 100%;

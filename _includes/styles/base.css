@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     font-size: var(--font-size-base);
+    height: 100%;
 }
 
 * {
@@ -15,15 +16,22 @@ figure {
 
 body {
     position: relative; /* Necessary to position dragon footer background */
+    display: flex;
+    flex-direction: column;
     /* 
         Mobile styles are designed to work down to 414px, 
         stop resizing at 320 so things don't crunch if the user is doing something funky
     */
     min-width: 320px;
+    min-height: 100%;
     color: var(--neutral-7);
     font-family: var(--font-copy);
     text-rendering: optimizeLegibility;
     background-color: var(--neutral-0);
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* Accessability */

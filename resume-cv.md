@@ -15,4 +15,6 @@ resumes:
     file: naomi-rubin_cv-resume_translation202411.pdf
 ---
 
-I've worked across multiple fields, so I maintain a few different résumé documents depending on the job area. Feel free to [email](mailto:hi@naomi.computer?subject=Naomi%20Rubin:%20naomi.computer%20Website%20Contact) if you need any more info about these! **Updated November, 2024**
+I've worked across multiple fields, so I maintain a few different résumé documents depending on the job area. Feel free to [email](mailto:hi@naomi.computer?subject=Naomi%20Rubin:%20naomi.computer%20Website%20Contact) if you need any more info about these!
+
+**Updated November, 2024**
