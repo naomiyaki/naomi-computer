@@ -473,6 +473,7 @@
 html {
     scroll-behavior: smooth;
     font-size: var(--font-size-base);
+    height: 100%;
 }
 
 * {
@@ -487,15 +488,22 @@ figure {
 
 body {
     position: relative; /* Necessary to position dragon footer background */
+    display: flex;
+    flex-direction: column;
     /* 
         Mobile styles are designed to work down to 414px, 
         stop resizing at 320 so things don't crunch if the user is doing something funky
     */
     min-width: 320px;
+    min-height: 100%;
     color: var(--neutral-7);
     font-family: var(--font-copy);
     text-rendering: optimizeLegibility;
     background-color: var(--neutral-0);
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* Accessability */
@@ -1884,6 +1892,7 @@ body.pagetype-detail {
 }
 .base-footer {
     display: flex;
+    flex-shrink: 0;
     justify-content: flex-end;
     margin: 6.5em 0 0 0;
     width: 100%;
@@ -2525,9 +2534,9 @@ body.pagetype-detail {
 .resume-copy {
     width: 630px;
     max-width: 100%;
-    margin: 1.6em auto;
+    margin: 2.5em auto;
     text-align: center;
-    font-size: 1.12em;
+    font-size: 1em;
 }
 
 .resume-copy .spacer {
@@ -2535,7 +2544,7 @@ body.pagetype-detail {
 }
 .resume-header {
     position: relative;
-    margin-top: -45px;
+    margin-top: -20px;
 }
 
 .resume-header .logo {
@@ -2565,7 +2574,7 @@ body.pagetype-detail {
     max-width: 100%;
     width: 385px;
     margin: 0 auto;
-    margin-top: -6.15em;
+    margin-top: -6em;
     text-align: center;
     padding: 2.26em 0;
 }
