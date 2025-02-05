@@ -1241,22 +1241,22 @@ body.pagetype-detail {
 }
 
 
-.featured-icons-list ul {
+.featured-list ul {
     display: flex;
     align-items: start;
     justify-content: center;
 }
 
-.featured-icons-list li {
+.featured-list li {
     max-width: 200px;
     margin-right: 3.125em;
 }
 
-.featured-icons-list li:nth-child(3) {
+.featured-list li:nth-child(3) {
     margin-right: 0;
 }
 
-.featured-icons-listing {
+.featured-listing {
     display: block;
     position: relative;
     width: 100%;
@@ -1264,95 +1264,65 @@ body.pagetype-detail {
     transition: transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
 }
 
-.featured-icons-listing figure:after {
+.featured-listing figure:after {
     content: '';
     position: absolute;
-    width: 118%;
-    height: 200%; /* This just has to be a lot bigger than the width */
-    background-image: url(/assets/images/featured-frame_sign@2x.png);
+    width: 105%;
+    height: 105%; /* This just has to be a lot bigger than the width */
+    background-image: url(/assets/images/featured-frame_border@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
-    top: -7%;
-    left: -8%;
+    top: -2%;
+    left: -2%;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     transition-delay: 0.1s;
 }
 
-
-.featured-icons-listing .icon {
-    position: absolute;
-    top: -1em;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-    opacity: 1;
-    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.featured-icons-listing:hover {
+.featured-listing:hover {
     transform: translate(0px, -1em);
     transition: transform 0.25s cubic-bezier(.21, 1.5, .64, 1);
 }
 
-.featured-icons-listing:hover figure:after {
+.featured-listing:hover figure:after {
     opacity: 1;
     pointer-events: all;
     transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.featured-icons-listing:hover .icon {
-    transform: translate(0px, -20%);
-    opacity: 0;
-    transition: transform 0.3s 0.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.featured-icons-listing .icon img {
-    width: 125px;
-    height: auto;
-}
-
-.featured-icons-listing .thumb {
+.featured-listing .thumb {
     mask-image: url(/assets/images/featured-frame_mask.svg);
     mask-repeat: no-repeat;
 }
 
-.featured-icons-listing .thumb img {
+.featured-listing .thumb img {
     width: 100%;
     height: auto;
 }
 
-.featured-icons-listing figcaption {
+.featured-listing figcaption {
     position: absolute;
     width: 100%;
     text-align: center;
     font-size: 1.438em;
     font-weight: 700;
     color: var(--neutral-0);
-    bottom: 2.3em;
-    /* Generated here: https: //owumaro.github.io/text-stroke-generator/ */
-    text-shadow: 
-    var(--neutral-7) 3px 0px 0px, 
-    var(--neutral-7) 2.83487px 0.981584px 0px,
-    var(--neutral-7) 2.35766px 1.85511px 0px,
-    var(--neutral-7) 1.62091px 2.52441px 0px,
-    var(--neutral-7) 0.705713px 2.91581px 0px,
-    var(--neutral-7) -0.287171px 2.98622px 0px,
-    var(--neutral-7) -1.24844px 2.72789px 0px,
-    var(--neutral-7) -2.07227px 2.16926px 0px,
-    var(--neutral-7) -2.66798px 1.37182px 0px,
-    var(--neutral-7) -2.96998px 0.42336px 0px,
-    var(--neutral-7) -2.94502px -0.571704px 0px,
-    var(--neutral-7) -2.59586px -1.50383px 0px,
-    var(--neutral-7) -1.96093px -2.27041px 0px,
-    var(--neutral-7) -1.11013px -2.78704px 0px,
-    var(--neutral-7) -0.137119px -2.99686px 0px,
-    var(--neutral-7) 0.850987px -2.87677px 0px,
-    var(--neutral-7) 1.74541px -2.43999px 0px,
-    var(--neutral-7) 2.44769px -1.73459px 0px,
-    var(--neutral-7) 2.88051px -0.838247px 0px;
+    top: 2em;
+    /* Generated here: https://owumaro.github.io/text-stroke-generator/ */
+    text-shadow: var(--neutral-7) 2px 0px 0px, 
+    var(--neutral-7) 1.75517px 0.958851px 0px, 
+    var(--neutral-7) 1.0806px 1.68294px 0px, 
+    var(--neutral-7) 0.141474px 1.99499px 0px, 
+    var(--neutral-7) -0.832294px 1.81859px 0px, 
+    var(--neutral-7) -1.60229px 1.19694px 0px, 
+    var(--neutral-7) -1.97998px 0.28224px 0px, 
+    var(--neutral-7) -1.87291px -0.701566px 0px, 
+    var(--neutral-7) -1.30729px -1.5136px 0px, 
+    var(--neutral-7) -0.421592px -1.95506px 0px, 
+    var(--neutral-7) 0.567324px -1.91785px 0px, 
+    var(--neutral-7) 1.41734px -1.41108px 0px, 
+    var(--neutral-7) 1.92034px -0.558831px 0px;
 }
 /* Filters */
 .filter-projects {
