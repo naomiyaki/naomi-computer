@@ -408,6 +408,7 @@
     --neutral-4: #938f8c;
     --accent-0: #ffaaaa;
     --accent-1: #9fb1ff;
+    --accent-1-dark: #667a94;
 
     --neutral-0-glass: rgb(252, 248, 244, 0.7);
 
@@ -1264,6 +1265,18 @@ body.pagetype-detail {
     transition: transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
 }
 
+.featured-listing .prompt-text {
+    position: absolute;
+    bottom: 16.5%;
+    left: 38%;
+    z-index: 10;
+    font-size: 1.375em;
+    font-weight: var(--font-bold);
+    color: var(--accent-1-dark);
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 .featured-listing figure:after {
     content: '';
     position: absolute;
@@ -1283,6 +1296,10 @@ body.pagetype-detail {
 .featured-listing:hover {
     transform: translate(0px, -1em);
     transition: transform 0.25s cubic-bezier(.21, 1.5, .64, 1);
+}
+
+.featured-listing:hover .prompt-text {
+    opacity: 1;
 }
 
 .featured-listing:hover figure:after {
