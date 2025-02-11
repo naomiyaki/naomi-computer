@@ -5,13 +5,19 @@
 */
 
 .resume-copy {
-    width: 630px;
-    max-width: 100%;
-    margin: 2.5em auto;
+    width: 100;
+    max-width: 730px;
+    margin: 1.8em auto 3em;
     text-align: center;
-    font-size: 1em;
 }
 
-.resume-copy .spacer {
-    height: 2em;
+@media screen and (min-width: 512px) {
+    .resume-copy {
+        margin: 2.5em auto 4em;
+    }
+}
+
+.resume-copy .container {
+    width: 100%;
+    padding: 0 var(--resp-side);
 }

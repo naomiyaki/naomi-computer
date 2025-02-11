@@ -6,10 +6,16 @@
 .resume-header .logo {
     position: relative;
     display: block;
-    max-width: 276px;
+    width: 235px;
     height: auto;
     margin: 0 auto;
     z-index: 10;
+}
+
+@media screen and (min-width: 600px) {
+    .resume-header .logo {
+        width: 276px;
+    }
 }
 
 .resume-header .container:before {
@@ -27,17 +33,29 @@
 
 .resume-header .container {
     position: relative;
-    max-width: 100%;
-    width: 385px;
+    width: 75%;
+    max-width: 385px;
     margin: 0 auto;
-    margin-top: -6em;
+    margin-top: -5.25em;
     text-align: center;
     padding: 2.26em 0;
 }
 
-.resume-header .container h1 {
+@media screen and (min-width: 600px) {
+    .resume-header .container {
+        margin-top: -5.9em;
+    }
+}
+
+.resume-header h1 {
     position: relative;
     margin: 0;
-    font-size: 2.188em;
+    font-size: 2em;
     z-index: 10;
+}
+
+@media screen and (min-width: 480px) {
+    .resume-header h1 {
+        font-size: 2.188em;
+    }
 }
