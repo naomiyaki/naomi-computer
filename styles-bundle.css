@@ -1067,15 +1067,21 @@ p a:hover {
 .default-copy .punch > p {
     margin: 0;
     padding-right: 0.75em;
+    text-align: right;
 }
 
 .default-copy .punch p + p {
     margin: 0;
     padding-right: 0;
     padding-left: 0.75em;
+    text-align: left;
 }
 
-/* 1-2 Punch with a portrait and a lanscape */
+.default-copy .punch p > picture {
+    display: inline-block;
+}
+
+/* 1-2 Punch with a portrait and a landscape */
 .default-copy .punch.punch-lp p + p {
     width: 56.5%;
 }
